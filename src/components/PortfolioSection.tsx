@@ -6,73 +6,47 @@ import { ExternalLink, Eye, Github } from 'lucide-react';
 import vehicleProject from '@/assets/vehicle-project.jpg';
 import cartoonApp from '@/assets/cartoon-app.jpg';
 import flowerApp from '@/assets/flower-app.jpg';
-
 const PortfolioSection = () => {
   const [selectedCategory, setSelectedCategory] = useState('All');
-  const projects = [
-    {
-      id: 1,
-      title: 'Vehicle Selling Website',
-      description: 'Modern e-commerce platform for buying and selling vehicles with advanced search and filtering capabilities.',
-      image: vehicleProject,
-      category: 'Web Design',
-      technologies: ['Figma', 'Webflow', 'UI/UX Design'],
-      features: [
-        'Responsive design across all devices',
-        'Advanced vehicle search and filtering',
-        'User-friendly booking system',
-        'Modern and clean interface'
-      ],
-      type: 'Website',
-      year: '2024'
-    },
-    {
-      id: 2,
-      title: 'Cartoon Character Generator',
-      description: 'Interactive mobile app allowing users to create and customize unique cartoon characters with various features.',
-      image: cartoonApp,
-      category: 'Mobile App',
-      technologies: ['Figma', 'Mobile UI', 'Interactive Design'],
-      features: [
-        'Character customization tools',
-        'Real-time preview',
-        'Save and share functionality',
-        'Intuitive touch interface'
-      ],
-      type: 'Mobile App',
-      year: '2024'
-    },
-    {
-      id: 3,
-      title: 'Flower Shop Mobile App',
-      description: 'E-commerce mobile application for a flower shop with custom bouquet creation and delivery tracking.',
-      image: flowerApp,
-      category: 'Mobile App',
-      technologies: ['Figma', 'E-commerce', 'Mobile UX'],
-      features: [
-        'Custom bouquet builder',
-        'Real-time delivery tracking',
-        'Seamless checkout process',
-        'Beautiful product gallery'
-      ],
-      type: 'Mobile App',
-      year: '2024'
-    }
-  ];
-
+  const projects = [{
+    id: 1,
+    title: 'Vehicle Selling Website',
+    description: 'Modern e-commerce platform for buying and selling vehicles with advanced search and filtering capabilities.',
+    image: vehicleProject,
+    category: 'Web Design',
+    technologies: ['Figma', 'Webflow', 'UI/UX Design'],
+    features: ['Responsive design across all devices', 'Advanced vehicle search and filtering', 'User-friendly booking system', 'Modern and clean interface'],
+    type: 'Website',
+    year: '2024'
+  }, {
+    id: 2,
+    title: 'Cartoon Character Generator',
+    description: 'Interactive mobile app allowing users to create and customize unique cartoon characters with various features.',
+    image: cartoonApp,
+    category: 'Mobile App',
+    technologies: ['Figma', 'Mobile UI', 'Interactive Design'],
+    features: ['Character customization tools', 'Real-time preview', 'Save and share functionality', 'Intuitive touch interface'],
+    type: 'Mobile App',
+    year: '2024'
+  }, {
+    id: 3,
+    title: 'Flower Shop Mobile App',
+    description: 'E-commerce mobile application for a flower shop with custom bouquet creation and delivery tracking.',
+    image: flowerApp,
+    category: 'Mobile App',
+    technologies: ['Figma', 'E-commerce', 'Mobile UX'],
+    features: ['Custom bouquet builder', 'Real-time delivery tracking', 'Seamless checkout process', 'Beautiful product gallery'],
+    type: 'Mobile App',
+    year: '2024'
+  }];
   const categories = ['All', 'Web Design', 'Mobile App', 'Landing Pages'];
-  
-  const filteredProjects = selectedCategory === 'All' 
-    ? projects 
-    : projects.filter(project => project.category === selectedCategory);
-  
-  return (
-    <section id="portfolio" className="py-20 bg-gradient-soft">
+  const filteredProjects = selectedCategory === 'All' ? projects : projects.filter(project => project.category === selectedCategory);
+  return <section id="portfolio" className="py-20 bg-gradient-soft">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6">
-            My <span className="bg-gradient-primary bg-clip-text text-transparent">Portfolio</span>
+          <h2 className="font-heading text-4xl font-bold mb-6 text-slate-700 sm:text-5xl">
+            My <span className="bg-gradient-primary bg-clip-text text-5xl font-bold text-slate-700">Portfolio</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             A showcase of my recent work, featuring innovative solutions that blend creativity 
@@ -82,32 +56,19 @@ const PortfolioSection = () => {
 
         {/* Filter Buttons */}
         <div className="flex flex-wrap justify-center gap-4 mb-12">
-          {categories.map((category) => (
-            <Button 
-              key={category}
-              variant={category === selectedCategory ? 'default' : 'outline'}
-              className={category === selectedCategory 
-                ? 'bg-gradient-primary text-white' 
-                : 'border-primary text-primary hover:bg-primary hover:text-white'
-              }
-              onClick={() => setSelectedCategory(category)}
-            >
+          {categories.map(category => <Button key={category} variant={category === selectedCategory ? 'default' : 'outline'} className={category === selectedCategory ? 'bg-gradient-primary text-white' : 'border-primary text-primary hover:bg-primary hover:text-white'} onClick={() => setSelectedCategory(category)}>
               {category}
-            </Button>
-          ))}
+            </Button>)}
         </div>
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          {filteredProjects.map((project, index) => (
-            <Card key={project.id} className="overflow-hidden shadow-soft hover-lift transition-all duration-300 hover:shadow-medium animate-scale-in group" style={{ animationDelay: `${index * 0.2}s` }}>
+          {filteredProjects.map((project, index) => <Card key={project.id} className="overflow-hidden shadow-soft hover-lift transition-all duration-300 hover:shadow-medium animate-scale-in group" style={{
+          animationDelay: `${index * 0.2}s`
+        }}>
               {/* Project Image */}
               <div className="relative overflow-hidden aspect-video">
-                <img 
-                  src={project.image} 
-                  alt={project.title}
-                  className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
-                />
+                <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                 <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
                 
                 {/* Overlay Actions */}
@@ -149,21 +110,17 @@ const PortfolioSection = () => {
 
                 {/* Technologies */}
                 <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="secondary" className="text-xs">
+                  {project.technologies.map((tech, techIndex) => <Badge key={techIndex} variant="secondary" className="text-xs">
                       {tech}
-                    </Badge>
-                  ))}
+                    </Badge>)}
                 </div>
 
                 {/* Features */}
                 <div className="space-y-2 mb-6">
-                  {project.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center text-sm">
+                  {project.features.map((feature, featureIndex) => <div key={featureIndex} className="flex items-center text-sm">
                       <div className="w-1.5 h-1.5 bg-primary rounded-full mr-3 flex-shrink-0"></div>
                       <span className="text-muted-foreground">{feature}</span>
-                    </div>
-                  ))}
+                    </div>)}
                 </div>
 
                 {/* Action Buttons */}
@@ -177,12 +134,13 @@ const PortfolioSection = () => {
                   </Button>
                 </div>
               </div>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Additional Projects Showcase */}
-        <Card className="p-8 shadow-medium bg-gradient-hero animate-fade-in-up" style={{ animationDelay: '1s' }}>
+        <Card className="p-8 shadow-medium bg-gradient-hero animate-fade-in-up" style={{
+        animationDelay: '1s'
+      }}>
           <div className="text-center mb-8">
             <h3 className="font-heading text-3xl font-semibold text-foreground mb-4">
               More Projects Coming Soon
@@ -194,12 +152,19 @@ const PortfolioSection = () => {
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: 'E-commerce Platform', status: 'In Progress', type: 'Web Design' },
-              { title: 'Healthcare App', status: 'Planning', type: 'Mobile App' },
-              { title: 'Portfolio Website', status: 'Concept', type: 'Landing Page' }
-            ].map((item, index) => (
-              <div key={index} className="text-center p-6 bg-background/50 rounded-lg">
+            {[{
+            title: 'E-commerce Platform',
+            status: 'In Progress',
+            type: 'Web Design'
+          }, {
+            title: 'Healthcare App',
+            status: 'Planning',
+            type: 'Mobile App'
+          }, {
+            title: 'Portfolio Website',
+            status: 'Concept',
+            type: 'Landing Page'
+          }].map((item, index) => <div key={index} className="text-center p-6 bg-background/50 rounded-lg">
                 <div className="w-16 h-16 bg-gradient-primary rounded-full flex items-center justify-center mx-auto mb-4">
                   <ExternalLink className="h-6 w-6 text-white" />
                 </div>
@@ -208,8 +173,7 @@ const PortfolioSection = () => {
                 <Badge variant="secondary" className="text-xs">
                   {item.status}
                 </Badge>
-              </div>
-            ))}
+              </div>)}
           </div>
         </Card>
 
@@ -222,22 +186,18 @@ const PortfolioSection = () => {
             I'd love to hear about your next project and help you create something amazing. 
             Let's discuss how we can bring your ideas to life.
           </p>
-          <Button 
-            size="lg"
-            className="bg-gradient-primary hover:opacity-90 text-white shadow-medium hover-lift"
-            onClick={() => {
-              const element = document.querySelector('#contact');
-              if (element) {
-                element.scrollIntoView({ behavior: 'smooth' });
-              }
-            }}
-          >
+          <Button size="lg" className="bg-gradient-primary hover:opacity-90 text-white shadow-medium hover-lift" onClick={() => {
+          const element = document.querySelector('#contact');
+          if (element) {
+            element.scrollIntoView({
+              behavior: 'smooth'
+            });
+          }
+        }}>
             Let's Work Together
           </Button>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default PortfolioSection;

@@ -1,83 +1,70 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { 
-  Palette, 
-  Figma, 
-  Smartphone, 
-  Monitor, 
-  TestTube, 
-  RefreshCw,
-  Layers,
-  Zap
-} from 'lucide-react';
-
+import { Palette, Figma, Smartphone, Monitor, TestTube, RefreshCw, Layers, Zap } from 'lucide-react';
 const SkillsSection = () => {
-  const skillCategories = [
-    {
-      icon: Palette,
-      title: 'Visual Design',
-      description: 'Creating beautiful and cohesive visual experiences',
-      skills: ['UI Design', 'Visual Design', 'Color Theory', 'Typography', 'Brand Identity']
-    },
-    {
-      icon: Layers,
-      title: 'UX Design',
-      description: 'Crafting user-centered design solutions',
-      skills: ['User Research', 'Wireframing', 'User Journey Mapping', 'Information Architecture']
-    },
-    {
-      icon: Zap,
-      title: 'Prototyping',
-      description: 'Bringing ideas to life through interactive prototypes',
-      skills: ['Interactive Prototypes', 'Micro-interactions', 'Animation Design', 'User Testing']
-    },
-    {
-      icon: Smartphone,
-      title: 'Mobile Design',
-      description: 'Designing seamless mobile experiences',
-      skills: ['iOS Design', 'Android Design', 'Mobile UI Patterns', 'Responsive Design']
-    },
-    {
-      icon: Monitor,
-      title: 'Web Design',
-      description: 'Creating engaging web interfaces and experiences',
-      skills: ['Landing Pages', 'Web Applications', 'Responsive Layouts', 'Web Accessibility']
-    },
-    {
-      icon: TestTube,
-      title: 'Research & Testing',
-      description: 'Validating designs through user feedback',
-      skills: ['Usability Testing', 'A/B Testing', 'User Interviews', 'Analytics Review']
-    }
-  ];
-
-  const tools = [
-    { name: 'Figma', proficiency: 95, color: 'bg-primary' },
-    { name: 'Affinity Designer', proficiency: 85, color: 'bg-primary-light' },
-    { name: 'Webflow', proficiency: 80, color: 'bg-primary-lighter' },
-    { name: 'Adobe XD', proficiency: 75, color: 'bg-accent' }
-  ];
-
-  const processes = [
-    {
-      icon: RefreshCw,
-      title: 'Iterative Design Process',
-      description: 'Continuously refining designs based on feedback and testing results'
-    },
-    {
-      icon: TestTube,
-      title: 'Usability Testing',
-      description: 'Regular testing with real users to validate design decisions'
-    }
-  ];
-
-  return (
-    <section id="skills" className="py-20 bg-gradient-soft">
+  const skillCategories = [{
+    icon: Palette,
+    title: 'Visual Design',
+    description: 'Creating beautiful and cohesive visual experiences',
+    skills: ['UI Design', 'Visual Design', 'Color Theory', 'Typography', 'Brand Identity']
+  }, {
+    icon: Layers,
+    title: 'UX Design',
+    description: 'Crafting user-centered design solutions',
+    skills: ['User Research', 'Wireframing', 'User Journey Mapping', 'Information Architecture']
+  }, {
+    icon: Zap,
+    title: 'Prototyping',
+    description: 'Bringing ideas to life through interactive prototypes',
+    skills: ['Interactive Prototypes', 'Micro-interactions', 'Animation Design', 'User Testing']
+  }, {
+    icon: Smartphone,
+    title: 'Mobile Design',
+    description: 'Designing seamless mobile experiences',
+    skills: ['iOS Design', 'Android Design', 'Mobile UI Patterns', 'Responsive Design']
+  }, {
+    icon: Monitor,
+    title: 'Web Design',
+    description: 'Creating engaging web interfaces and experiences',
+    skills: ['Landing Pages', 'Web Applications', 'Responsive Layouts', 'Web Accessibility']
+  }, {
+    icon: TestTube,
+    title: 'Research & Testing',
+    description: 'Validating designs through user feedback',
+    skills: ['Usability Testing', 'A/B Testing', 'User Interviews', 'Analytics Review']
+  }];
+  const tools = [{
+    name: 'Figma',
+    proficiency: 95,
+    color: 'bg-primary'
+  }, {
+    name: 'Affinity Designer',
+    proficiency: 85,
+    color: 'bg-primary-light'
+  }, {
+    name: 'Webflow',
+    proficiency: 80,
+    color: 'bg-primary-lighter'
+  }, {
+    name: 'Adobe XD',
+    proficiency: 75,
+    color: 'bg-accent'
+  }];
+  const processes = [{
+    icon: RefreshCw,
+    title: 'Iterative Design Process',
+    description: 'Continuously refining designs based on feedback and testing results'
+  }, {
+    icon: TestTube,
+    title: 'Usability Testing',
+    description: 'Regular testing with real users to validate design decisions'
+  }];
+  return <section id="skills" className="py-20 bg-gradient-soft">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="font-heading text-4xl sm:text-5xl font-bold text-foreground mb-6">
-            Skills & <span className="bg-gradient-primary bg-clip-text text-transparent">Expertise</span>
+          <h2 className="font-heading text-4xl font-bold mb-6 text-slate-700 sm:text-5xl">
+            Skills & <span className="bg-gradient-primary bg-clip-text text-slate-700 font-bold text-5xl">Expertise</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             A comprehensive toolkit for creating exceptional user experiences across all platforms and touchpoints.
@@ -86,8 +73,9 @@ const SkillsSection = () => {
 
         {/* Skills Grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
-          {skillCategories.map((category, index) => (
-            <Card key={index} className="p-6 shadow-soft hover-lift transition-all duration-300 hover:shadow-medium animate-scale-in" style={{ animationDelay: `${index * 0.1}s` }}>
+          {skillCategories.map((category, index) => <Card key={index} className="p-6 shadow-soft hover-lift transition-all duration-300 hover:shadow-medium animate-scale-in" style={{
+          animationDelay: `${index * 0.1}s`
+        }}>
               <div className="flex items-center mb-4">
                 <div className="p-3 bg-primary/10 rounded-lg mr-4">
                   <category.icon className="h-6 w-6 text-primary" />
@@ -100,52 +88,49 @@ const SkillsSection = () => {
               </p>
               
               <div className="flex flex-wrap gap-2">
-                {category.skills.map((skill, skillIndex) => (
-                  <Badge key={skillIndex} variant="secondary" className="text-xs">
+                {category.skills.map((skill, skillIndex) => <Badge key={skillIndex} variant="secondary" className="text-xs">
                     {skill}
-                  </Badge>
-                ))}
+                  </Badge>)}
               </div>
-            </Card>
-          ))}
+            </Card>)}
         </div>
 
         {/* Tools & Proficiency */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {/* Tools */}
-          <Card className="p-8 shadow-soft animate-fade-in-up" style={{ animationDelay: '0.6s' }}>
+          <Card className="p-8 shadow-soft animate-fade-in-up" style={{
+          animationDelay: '0.6s'
+        }}>
             <h3 className="font-heading text-2xl font-semibold text-foreground mb-6 flex items-center">
               <Figma className="mr-3 h-6 w-6 text-primary" />
               Design Tools
             </h3>
             
             <div className="space-y-6">
-              {tools.map((tool, index) => (
-                <div key={index} className="space-y-2">
+              {tools.map((tool, index) => <div key={index} className="space-y-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium text-foreground">{tool.name}</span>
                     <span className="text-sm text-muted-foreground">{tool.proficiency}%</span>
                   </div>
                   <div className="w-full bg-muted rounded-full h-2">
-                    <div 
-                      className={`h-2 rounded-full ${tool.color} transition-all duration-1000 ease-out`}
-                      style={{ width: `${tool.proficiency}%` }}
-                    ></div>
+                    <div className={`h-2 rounded-full ${tool.color} transition-all duration-1000 ease-out`} style={{
+                  width: `${tool.proficiency}%`
+                }}></div>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
           </Card>
 
           {/* Process */}
-          <Card className="p-8 shadow-soft animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
+          <Card className="p-8 shadow-soft animate-fade-in-up" style={{
+          animationDelay: '0.8s'
+        }}>
             <h3 className="font-heading text-2xl font-semibold text-foreground mb-6">
               Design Process
             </h3>
             
             <div className="space-y-6">
-              {processes.map((process, index) => (
-                <div key={index} className="flex items-start space-x-4">
+              {processes.map((process, index) => <div key={index} className="flex items-start space-x-4">
                   <div className="p-3 bg-primary/10 rounded-lg flex-shrink-0">
                     <process.icon className="h-5 w-5 text-primary" />
                   </div>
@@ -153,8 +138,7 @@ const SkillsSection = () => {
                     <h4 className="font-semibold text-foreground mb-2">{process.title}</h4>
                     <p className="text-muted-foreground text-sm leading-relaxed">{process.description}</p>
                   </div>
-                </div>
-              ))}
+                </div>)}
             </div>
 
             {/* Design Process Steps */}
@@ -194,8 +178,6 @@ const SkillsSection = () => {
           </Card>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default SkillsSection;
