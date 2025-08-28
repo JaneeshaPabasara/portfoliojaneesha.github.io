@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
@@ -7,6 +8,7 @@ import cartoonApp from '@/assets/cartoon-app.jpg';
 import flowerApp from '@/assets/flower-app.jpg';
 
 const PortfolioSection = () => {
+  const [selectedCategory, setSelectedCategory] = useState('All');
   const projects = [
     {
       id: 1,
@@ -60,6 +62,10 @@ const PortfolioSection = () => {
 
   const categories = ['All', 'Web Design', 'Mobile App', 'Landing Pages'];
   
+  const filteredProjects = selectedCategory === 'All' 
+    ? projects 
+    : projects.filter(project => project.category === selectedCategory);
+  
   return (
     <section id="portfolio" className="py-20 bg-gradient-soft">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -79,11 +85,12 @@ const PortfolioSection = () => {
           {categories.map((category) => (
             <Button 
               key={category}
-              variant={category === 'All' ? 'default' : 'outline'}
-              className={category === 'All' 
+              variant={category === selectedCategory ? 'default' : 'outline'}
+              className={category === selectedCategory 
                 ? 'bg-gradient-primary text-white' 
                 : 'border-primary text-primary hover:bg-primary hover:text-white'
               }
+              onClick={() => setSelectedCategory(category)}
             >
               {category}
             </Button>
@@ -92,7 +99,7 @@ const PortfolioSection = () => {
 
         {/* Projects Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          {projects.map((project, index) => (
+          {filteredProjects.map((project, index) => (
             <Card key={project.id} className="overflow-hidden shadow-soft hover-lift transition-all duration-300 hover:shadow-medium animate-scale-in group" style={{ animationDelay: `${index * 0.2}s` }}>
               {/* Project Image */}
               <div className="relative overflow-hidden aspect-video">

@@ -90,14 +90,6 @@ const AboutSection = () => {
                 </div>
               </Card>
             ))}
-
-            {/* Personal Quote */}
-            <Card className="p-8 bg-gradient-primary text-white shadow-medium mt-8">
-              <blockquote className="text-lg font-medium italic text-center">
-                "Design is not just what it looks like and feels like. Design is how it works."
-              </blockquote>
-              <p className="text-center mt-4 text-white/80">— My design philosophy</p>
-            </Card>
           </div>
         </div>
       </div>
