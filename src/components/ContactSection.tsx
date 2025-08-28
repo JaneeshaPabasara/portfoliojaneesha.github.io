@@ -31,24 +31,26 @@ const ContactSection = () => {
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     setIsSubmitting(true);
+    
     try {
-      // Send email using EmailJS
-      await emailjs.send('service_contact',
-      // You'll need to set up EmailJS service
-      'template_contact',
-      // You'll need to create a template
-      {
-        from_name: formData.name,
-        from_email: formData.email,
-        subject: formData.subject,
-        message: formData.message,
-        to_email: 'Janeeshapaba@gmail.com'
-      }, 'YOUR_PUBLIC_KEY' // Replace with your EmailJS public key
+      // Create mailto link with pre-filled information
+      const subject = encodeURIComponent(`Contact Form: ${formData.subject}`);
+      const body = encodeURIComponent(
+        `Name: ${formData.name}\n` +
+        `Email: ${formData.email}\n` +
+        `Subject: ${formData.subject}\n\n` +
+        `Message:\n${formData.message}`
       );
+      const mailtoLink = `mailto:Janeeshapaba@gmail.com?subject=${subject}&body=${body}`;
+      
+      // Open default email client
+      window.location.href = mailtoLink;
+      
       toast({
-        title: "Message Sent!",
-        description: "Thank you for your message. I'll get back to you soon!"
+        title: "Opening Email Client",
+        description: "Your default email client will open with the message pre-filled."
       });
+      
       setFormData({
         name: '',
         email: '',
@@ -58,7 +60,7 @@ const ContactSection = () => {
     } catch (error) {
       toast({
         title: "Error!",
-        description: "Failed to send message. Please try again or contact directly.",
+        description: "Failed to open email client. Please contact Janeeshapaba@gmail.com directly.",
         variant: "destructive"
       });
     } finally {
@@ -95,7 +97,7 @@ const ContactSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="font-heading text-4xl font-bold mb-6 text-slate-700 sm:text-5xl">
-            Let's <span className="bg-gradient-primary bg-clip-text text-slate-700 text-5xl font-bold">Connect</span>
+            Let's <span className="text-slate-700 text-5xl font-bold">Connect</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Ready to start your next project? I'd love to hear from you. 
