@@ -46,7 +46,7 @@ const PortfolioSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="font-heading text-4xl font-bold mb-6 text-slate-700 sm:text-5xl">
-            My <span className="bg-gradient-primary bg-clip-text text-5xl font-bold text-slate-700">Portfolio</span>
+            My <span className="text-5xl font-bold text-slate-700">Portfolio</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             A showcase of my recent work, featuring innovative solutions that blend creativity 

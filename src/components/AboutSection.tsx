@@ -19,7 +19,7 @@ const AboutSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="font-heading text-4xl font-bold mb-6 text-slate-700 sm:text-5xl">
-            About <span className="bg-gradient-primary bg-clip-text font-bold text-slate-700 text-5xl">Me</span>
+            About <span className="font-bold text-slate-700 text-5xl">Me</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Get to know the person behind the designs and discover what drives my passion for creating 

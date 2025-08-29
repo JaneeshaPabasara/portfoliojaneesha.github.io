@@ -40,7 +40,7 @@ const ServicesSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="font-heading text-4xl font-bold mb-6 text-slate-700 sm:text-5xl">
-            My <span className="bg-gradient-primary bg-clip-text text-slate-700 text-5xl font-bold">Services</span>
+            My <span className="text-slate-700 text-5xl font-bold">Services</span>
           </h2>
           <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
             Comprehensive design solutions that combine creativity, functionality, and user-centric thinking 
