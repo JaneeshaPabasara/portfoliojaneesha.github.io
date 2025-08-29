@@ -33,24 +33,26 @@ const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      // Create mailto link with pre-filled information
-      const subject = encodeURIComponent(`Contact Form: ${formData.subject}`);
-      const body = encodeURIComponent(
-        `Name: ${formData.name}\n` +
-        `Email: ${formData.email}\n` +
-        `Subject: ${formData.subject}\n\n` +
-        `Message:\n${formData.message}`
+      // Send email using EmailJS
+      await emailjs.send(
+        'service_xb2ol89', // Your service ID
+        'template_0imedub', // Your template ID
+        {
+          from_name: formData.name,
+          from_email: formData.email,
+          subject: formData.subject,
+          message: formData.message,
+          to_email: 'Janeeshapaba@gmail.com'
+        },
+        '3p58NgnkVRV7JPiih' // Your public key
       );
-      const mailtoLink = `mailto:Janeeshapaba@gmail.com?subject=${subject}&body=${body}`;
-      
-      // Open default email client
-      window.location.href = mailtoLink;
       
       toast({
-        title: "Opening Email Client",
-        description: "Your default email client will open with the message pre-filled."
+        title: "Message Sent!",
+        description: "Thank you for your message. I'll get back to you soon!"
       });
       
+      // Clear form on successful submission
       setFormData({
         name: '',
         email: '',
@@ -58,9 +60,10 @@ const ContactSection = () => {
         message: ''
       });
     } catch (error) {
+      console.error('EmailJS error:', error);
       toast({
         title: "Error!",
-        description: "Failed to open email client. Please contact Janeeshapaba@gmail.com directly.",
+        description: "Failed to send message. Please try again or contact directly.",
         variant: "destructive"
       });
     } finally {
