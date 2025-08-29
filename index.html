@@ -1,30 +1,826 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Janeesha Pabasara - UI/UX Designer</title>
-    <meta name="description" content="Portfolio of Janeesha Pabasara - Passionate UI/UX Designer creating intuitive and visually stunning user experiences. Specializing in wireframing, prototyping, and visual design." />
-    <meta name="author" content="Janeesha Pabasara" />
-    <meta name="keywords" content="UI/UX Designer, Portfolio, Wireframing, Prototyping, Visual Design, Figma, Webflow" />
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Janeesha Pabasara - UI/UX Designer Portfolio</title>
+    <meta name="description" content="Passionate UI/UX Designer creating intuitive and visually stunning user experiences. Specializing in wireframing, prototyping, and visual design.">
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+</head>
+<body>
+    <!-- Navigation -->
+    <nav id="navbar" class="navbar">
+        <div class="nav-container">
+            <div class="nav-content">
+                <div class="nav-logo">
+                    <button onclick="scrollToSection('home')" class="logo-button">
+                        Janeesha Pabasara
+                    </button>
+                </div>
+                
+                <div class="nav-links desktop-nav">
+                    <button onclick="scrollToSection('home')">Home</button>
+                    <button onclick="scrollToSection('about')">About</button>
+                    <button onclick="scrollToSection('skills')">Skills</button>
+                    <button onclick="scrollToSection('services')">Services</button>
+                    <button onclick="scrollToSection('portfolio')">Portfolio</button>
+                    <button onclick="scrollToSection('contact')">Contact</button>
+                </div>
+                
+                <div class="mobile-menu-btn">
+                    <button id="mobile-toggle" onclick="toggleMobileMenu()">
+                        <span class="hamburger"></span>
+                    </button>
+                </div>
+            </div>
+            
+            <div id="mobile-menu" class="mobile-menu">
+                <div class="mobile-nav-links">
+                    <button onclick="scrollToSection('home'); closeMobileMenu()">Home</button>
+                    <button onclick="scrollToSection('about'); closeMobileMenu()">About</button>
+                    <button onclick="scrollToSection('skills'); closeMobileMenu()">Skills</button>
+                    <button onclick="scrollToSection('services'); closeMobileMenu()">Services</button>
+                    <button onclick="scrollToSection('portfolio'); closeMobileMenu()">Portfolio</button>
+                    <button onclick="scrollToSection('contact'); closeMobileMenu()">Contact</button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
-    <meta property="og:title" content="Janeesha Pabasara - UI/UX Designer" />
-    <meta property="og:description" content="Portfolio of Janeesha Pabasara - Passionate UI/UX Designer creating intuitive and visually stunning user experiences." />
-    <meta property="og:type" content="website" />
-    <meta property="og:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <div class="hero-greeting">
+                        <span class="wave">👋</span>
+                        <span>Hi, I'm <span class="highlight">Janeesha</span></span>
+                    </div>
+                    <h1 class="hero-title">
+                        UI/UX Designer & <br>
+                        <span class="gradient-text">Creative Visionary</span>
+                    </h1>
+                    <p class="hero-description">
+                        Passionate about creating intuitive and visually stunning user experiences that bridge the gap between user needs and business goals. I specialize in wireframing, prototyping, and bringing digital ideas to life.
+                    </p>
+                    <div class="hero-buttons">
+                        <button onclick="scrollToSection('portfolio')" class="btn btn-primary">
+                            View My Work
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m9 18 6-6-6-6"/>
+                            </svg>
+                        </button>
+                        <button onclick="scrollToSection('contact')" class="btn btn-outline">
+                            Get In Touch
+                        </button>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <div class="profile-container">
+                        <img src="src/assets/profile-picture.jpg" alt="Janeesha Pabasara - UI/UX Designer" class="profile-image">
+                        <div class="profile-glow"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:site" content="@janeesha_design" />
-    <meta name="twitter:image" content="https://lovable.dev/opengraph-image-p98pqg.png" />
-    
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600;700&display=swap" rel="stylesheet">
-  </head>
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    About <span class="title-highlight">Me</span>
+                </h2>
+                <p class="section-subtitle">
+                    Passionate designer with a keen eye for detail and a deep understanding of user-centered design principles.
+                </p>
+            </div>
+            
+            <div class="about-content">
+                <div class="about-text">
+                    <div class="about-card">
+                        <h3 class="about-card-title">My Design Philosophy</h3>
+                        <p class="about-card-text">
+                            I believe great design is invisible. It should feel natural, intuitive, and delightful to users while solving real problems. My approach combines user research, creative thinking, and technical understanding to create experiences that truly matter.
+                        </p>
+                    </div>
+                    
+                    <div class="about-card">
+                        <h3 class="about-card-title">What Drives Me</h3>
+                        <p class="about-card-text">
+                            I'm passionate about the intersection of psychology and design. Understanding how users think, feel, and behave helps me create interfaces that not only look beautiful but also work seamlessly for real people with real needs.
+                        </p>
+                    </div>
+                </div>
+                
+                <div class="about-stats">
+                    <div class="stat-card">
+                        <div class="stat-number">3+</div>
+                        <div class="stat-label">Years Experience</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">50+</div>
+                        <div class="stat-label">Projects Completed</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-number">100%</div>
+                        <div class="stat-label">Client Satisfaction</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <body>
-    <div id="root"></div>
-    <script type="module" src="/src/main.tsx"></script>
-  </body>
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    Skills & <span class="title-highlight">Expertise</span>
+                </h2>
+                <p class="section-subtitle">
+                    A comprehensive toolkit for creating exceptional user experiences across all platforms and touchpoints.
+                </p>
+            </div>
+            
+            <div class="skills-grid">
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="skill-title">Visual Design</h3>
+                    <p class="skill-description">Creating beautiful and cohesive visual experiences</p>
+                    <div class="skill-tags">
+                        <span class="tag">UI Design</span>
+                        <span class="tag">Visual Design</span>
+                        <span class="tag">Color Theory</span>
+                        <span class="tag">Typography</span>
+                        <span class="tag">Brand Identity</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="skill-title">UX Design</h3>
+                    <p class="skill-description">Crafting user-centered design solutions</p>
+                    <div class="skill-tags">
+                        <span class="tag">User Research</span>
+                        <span class="tag">Wireframing</span>
+                        <span class="tag">User Journey Mapping</span>
+                        <span class="tag">Information Architecture</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="skill-title">Prototyping</h3>
+                    <p class="skill-description">Bringing ideas to life through interactive prototypes</p>
+                    <div class="skill-tags">
+                        <span class="tag">Interactive Prototypes</span>
+                        <span class="tag">Micro-interactions</span>
+                        <span class="tag">Animation Design</span>
+                        <span class="tag">User Testing</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="skill-title">Mobile Design</h3>
+                    <p class="skill-description">Designing seamless mobile experiences</p>
+                    <div class="skill-tags">
+                        <span class="tag">iOS Design</span>
+                        <span class="tag">Android Design</span>
+                        <span class="tag">Mobile UI Patterns</span>
+                        <span class="tag">Responsive Design</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="skill-title">Web Design</h3>
+                    <p class="skill-description">Creating engaging web interfaces and experiences</p>
+                    <div class="skill-tags">
+                        <span class="tag">Landing Pages</span>
+                        <span class="tag">Web Applications</span>
+                        <span class="tag">Responsive Layouts</span>
+                        <span class="tag">Web Accessibility</span>
+                    </div>
+                </div>
+                
+                <div class="skill-card">
+                    <div class="skill-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="skill-title">Research & Testing</h3>
+                    <p class="skill-description">Validating designs through user feedback</p>
+                    <div class="skill-tags">
+                        <span class="tag">Usability Testing</span>
+                        <span class="tag">A/B Testing</span>
+                        <span class="tag">User Interviews</span>
+                        <span class="tag">Analytics Review</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="tools-section">
+                <div class="tools-card">
+                    <h3 class="tools-title">Design Tools</h3>
+                    <div class="tool-progress">
+                        <div class="tool-item">
+                            <div class="tool-info">
+                                <span class="tool-name">Figma</span>
+                                <span class="tool-percent">95%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 95%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="tool-item">
+                            <div class="tool-info">
+                                <span class="tool-name">Affinity Designer</span>
+                                <span class="tool-percent">85%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 85%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="tool-item">
+                            <div class="tool-info">
+                                <span class="tool-name">Webflow</span>
+                                <span class="tool-percent">80%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 80%"></div>
+                            </div>
+                        </div>
+                        
+                        <div class="tool-item">
+                            <div class="tool-info">
+                                <span class="tool-name">Adobe XD</span>
+                                <span class="tool-percent">75%</span>
+                            </div>
+                            <div class="progress-bar">
+                                <div class="progress-fill" style="width: 75%"></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="services-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    My <span class="title-highlight">Services</span>
+                </h2>
+                <p class="section-subtitle">
+                    Comprehensive design solutions that combine creativity, functionality, and user-centric thinking to deliver exceptional results for your projects.
+                </p>
+            </div>
+            
+            <div class="services-grid">
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Wireframing & Prototyping</h3>
+                    <p class="service-description">Transform your ideas into interactive prototypes that bring your vision to life.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3l8-8"/>
+                            </svg>
+                            <span>Low & High Fidelity Wireframes</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3l8-8"/>
+                            </svg>
+                            <span>Interactive Prototypes</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3l8-8"/>
+                            </svg>
+                            <span>User Flow Mapping</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3l8-8"/>
+                            </svg>
+                            <span>Clickable Mockups</span>
+                        </div>
+                    </div>
+                    <button onclick="scrollToSection('contact')" class="btn btn-outline service-btn">
+                        Get Started
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m9 18 6-6-6-6"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Visual Design & UI/UX</h3>
+                    <p class="service-description">Create stunning visual experiences that captivate users and drive engagement.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3l8-8"/>
+                            </svg>
+                            <span>Modern UI Design</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3l8-8"/>
+                            </svg>
+                            <span>User Experience Design</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3l8-8"/>
+                            </svg>
+                            <span>Design Systems</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3l8-8"/>
+                            </svg>
+                            <span>Brand Integration</span>
+                        </div>
+                    </div>
+                    <button onclick="scrollToSection('contact')" class="btn btn-outline service-btn">
+                        Get Started
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m9 18 6-6-6-6"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Mobile App Design</h3>
+                    <p class="service-description">Design intuitive mobile experiences that users love to interact with.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3l8-8"/>
+                            </svg>
+                            <span>iOS & Android Design</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3l8-8"/>
+                            </svg>
+                            <span>Mobile-First Approach</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3l8-8"/>
+                            </svg>
+                            <span>Touch-Friendly Interfaces</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3l8-8"/>
+                            </svg>
+                            <span>App Store Optimization</span>
+                        </div>
+                    </div>
+                    <button onclick="scrollToSection('contact')" class="btn btn-outline service-btn">
+                        Get Started
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m9 18 6-6-6-6"/>
+                        </svg>
+                    </button>
+                </div>
+                
+                <div class="service-card">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Website Design & Landing Pages</h3>
+                    <p class="service-description">Build responsive web experiences that convert visitors into customers.</p>
+                    <div class="service-features">
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3l8-8"/>
+                            </svg>
+                            <span>Responsive Web Design</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3l8-8"/>
+                            </svg>
+                            <span>Landing Page Optimization</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3l8-8"/>
+                            </svg>
+                            <span>E-commerce Design</span>
+                        </div>
+                        <div class="feature-item">
+                            <svg class="check-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M9 11l3 3l8-8"/>
+                            </svg>
+                            <span>Web Accessibility</span>
+                        </div>
+                    </div>
+                    <button onclick="scrollToSection('contact')" class="btn btn-outline service-btn">
+                        Get Started
+                        <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="m9 18 6-6-6-6"/>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section id="portfolio" class="portfolio-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">
+                    My <span class="title-highlight">Portfolio</span>
+                </h2>
+                <p class="section-subtitle">
+                    A showcase of my recent work, featuring innovative solutions that blend creativity with functionality to deliver exceptional user experiences.
+                </p>
+            </div>
+            
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="web-design">Web Design</button>
+                <button class="filter-btn" data-filter="mobile-app">Mobile App</button>
+                <button class="filter-btn" data-filter="landing-pages">Landing Pages</button>
+            </div>
+            
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="web-design">
+                    <div class="portfolio-image">
+                        <img src="src/assets/vehicle-project.jpg" alt="Vehicle Selling Website" class="project-image">
+                        <div class="portfolio-overlay">
+                            <button class="btn btn-small">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                View Details
+                            </button>
+                        </div>
+                        <div class="project-category">Web Design</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Vehicle Selling Website</h3>
+                            <div class="project-meta">
+                                <span>Website</span>
+                                <span>•</span>
+                                <span>2024</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Modern e-commerce platform for buying and selling vehicles with advanced search and filtering capabilities.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Webflow</span>
+                            <span class="tag">UI/UX Design</span>
+                        </div>
+                        <div class="project-features">
+                            <div class="feature">• Responsive design across all devices</div>
+                            <div class="feature">• Advanced vehicle search and filtering</div>
+                            <div class="feature">• User-friendly booking system</div>
+                            <div class="feature">• Modern and clean interface</div>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn btn-outline">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                View Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="mobile-app">
+                    <div class="portfolio-image">
+                        <img src="src/assets/cartoon-app.jpg" alt="Cartoon Character Generator" class="project-image">
+                        <div class="portfolio-overlay">
+                            <button class="btn btn-small">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                View Details
+                            </button>
+                        </div>
+                        <div class="project-category">Mobile App</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Cartoon Character Generator</h3>
+                            <div class="project-meta">
+                                <span>Mobile App</span>
+                                <span>•</span>
+                                <span>2024</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            Interactive mobile app allowing users to create and customize unique cartoon characters with various features.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">Mobile UI</span>
+                            <span class="tag">Interactive Design</span>
+                        </div>
+                        <div class="project-features">
+                            <div class="feature">• Character customization tools</div>
+                            <div class="feature">• Real-time preview</div>
+                            <div class="feature">• Save and share functionality</div>
+                            <div class="feature">• Intuitive touch interface</div>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn btn-outline">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                View Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="portfolio-item" data-category="mobile-app">
+                    <div class="portfolio-image">
+                        <img src="src/assets/flower-app.jpg" alt="Flower Shop Mobile App" class="project-image">
+                        <div class="portfolio-overlay">
+                            <button class="btn btn-small">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                View Details
+                            </button>
+                        </div>
+                        <div class="project-category">Mobile App</div>
+                    </div>
+                    <div class="portfolio-content">
+                        <div class="project-header">
+                            <h3 class="project-title">Flower Shop Mobile App</h3>
+                            <div class="project-meta">
+                                <span>Mobile App</span>
+                                <span>•</span>
+                                <span>2024</span>
+                            </div>
+                        </div>
+                        <p class="project-description">
+                            E-commerce mobile application for a flower shop with custom bouquet creation and delivery tracking.
+                        </p>
+                        <div class="project-tags">
+                            <span class="tag">Figma</span>
+                            <span class="tag">E-commerce</span>
+                            <span class="tag">Mobile UX</span>
+                        </div>
+                        <div class="project-features">
+                            <div class="feature">• Custom bouquet builder</div>
+                            <div class="feature">• Real-time delivery tracking</div>
+                            <div class="feature">• Seamless checkout process</div>
+                            <div class="feature">• Beautiful product gallery</div>
+                        </div>
+                        <div class="project-actions">
+                            <button class="btn btn-outline">
+                                <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M1 12s4-8 11-8 11 8 11 8-4 8-11 8-11-8-11-8z"/>
+                                    <circle cx="12" cy="12" r="3"/>
+                                </svg>
+                                View Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Let's Work Together</h2>
+                <p class="section-subtitle">
+                    Ready to bring your ideas to life? I'm here to help you create amazing user experiences that your users will love.
+                </p>
+            </div>
+            
+            <div class="contact-content">
+                <div class="contact-form-container">
+                    <form id="contact-form" class="contact-form">
+                        <div class="form-group">
+                            <label for="name" class="form-label">Name</label>
+                            <input type="text" id="name" name="name" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="email" class="form-label">Email</label>
+                            <input type="email" id="email" name="email" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="subject" class="form-label">Subject</label>
+                            <input type="text" id="subject" name="subject" class="form-input" required>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label for="message" class="form-label">Message</label>
+                            <textarea id="message" name="message" class="form-textarea" rows="5" required></textarea>
+                        </div>
+                        
+                        <button type="submit" class="btn btn-primary btn-full">
+                            Send Message
+                            <svg class="btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="m22 2-7 20-4-9-9-4z"/>
+                                <path d="m22 2-10 10"/>
+                            </svg>
+                        </button>
+                    </form>
+                </div>
+                
+                <div class="contact-info">
+                    <div class="contact-card">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                    <polyline points="22,6 12,13 2,6"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-label">Email</div>
+                                <a href="mailto:Janeeshapaba@gmail.com" class="contact-value">Janeeshapaba@gmail.com</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-label">Phone</div>
+                                <a href="tel:+94766139452" class="contact-value">+94 76 613 9452</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                    <rect width="4" height="12" x="2" y="9"/>
+                                    <circle cx="4" cy="4" r="2"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-label">LinkedIn</div>
+                                <a href="https://linkedin.com/in/janeesha-pabasara-3128ba317" target="_blank" class="contact-value">Connect with me</a>
+                            </div>
+                        </div>
+                        
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                    <path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/>
+                                    <circle cx="12" cy="10" r="3"/>
+                                </svg>
+                            </div>
+                            <div class="contact-details">
+                                <div class="contact-label">Location</div>
+                                <span class="contact-value">Colombo, Sri Lanka</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-brand">
+                    <button onclick="scrollToTop()" class="footer-logo">Janeesha Pabasara</button>
+                    <p class="footer-description">
+                        Passionate UI/UX Designer creating intuitive and visually stunning user experiences. 
+                        Specializing in wireframing, prototyping, and visual design.
+                    </p>
+                    <div class="social-links">
+                        <a href="mailto:Janeeshapaba@gmail.com" class="social-link" aria-label="Email">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                                <polyline points="22,6 12,13 2,6"/>
+                            </svg>
+                        </a>
+                        <a href="tel:+94766139452" class="social-link" aria-label="Phone">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                            </svg>
+                        </a>
+                        <a href="https://linkedin.com/in/janeesha-pabasara-3128ba317" target="_blank" class="social-link" aria-label="LinkedIn">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z"/>
+                                <rect width="4" height="12" x="2" y="9"/>
+                                <circle cx="4" cy="4" r="2"/>
+                            </svg>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="footer-links">
+                    <h4 class="footer-title">Quick Links</h4>
+                    <div class="footer-nav">
+                        <button onclick="scrollToSection('home')" class="footer-link">Home</button>
+                        <button onclick="scrollToSection('about')" class="footer-link">About</button>
+                        <button onclick="scrollToSection('skills')" class="footer-link">Skills</button>
+                        <button onclick="scrollToSection('services')" class="footer-link">Services</button>
+                        <button onclick="scrollToSection('portfolio')" class="footer-link">Portfolio</button>
+                        <button onclick="scrollToSection('contact')" class="footer-link">Contact</button>
+                    </div>
+                </div>
+                
+                <div class="footer-contact">
+                    <h4 class="footer-title">Get in Touch</h4>
+                    <div class="footer-contact-info">
+                        <p class="contact-text">
+                            <strong>Email:</strong>
+                            <a href="mailto:Janeeshapaba@gmail.com">Janeeshapaba@gmail.com</a>
+                        </p>
+                        <p class="contact-text">
+                            <strong>Phone:</strong>
+                            <a href="tel:+94766139452">+94 76 613 9452</a>
+                        </p>
+                        <p class="contact-text">
+                            <strong>Alternative:</strong>
+                            <a href="tel:+94725139452">+94 72 513 9452</a>
+                        </p>
+                        <p class="contact-text">
+                            <strong>Location:</strong> Colombo, Sri Lanka
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Toast Notification -->
+    <div id="toast" class="toast"></div>
+
+    <script src="script.js"></script>
+</body>
 </html>
