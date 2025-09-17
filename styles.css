@@ -20,8 +20,10 @@ body {
 :root {
     /* Colors */
     --primary: hsl(220, 13%, 69%);
-    --primary-light: hsl(220, 13%, 75%);
-    --primary-lighter: hsl(220, 13%, 85%);
+    --primary-light: hsl(222, 52%, 29%);
+     /* hsl(220, 13%, 75%); */
+    --primary-lighter: hsl(222, 52%, 29%);
+    /* hsl(220, 13%, 85%); */
     --accent: hsl(12, 6%, 15%);
     --secondary: hsl(210, 11%, 71%);
     --background: hsl(0, 0%, 100%);

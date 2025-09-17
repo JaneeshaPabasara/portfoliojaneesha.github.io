@@ -1,6 +1,7 @@
 // Initialize EmailJS
 (function() {
     emailjs.init("3p58NgnkVRV7JPiih");
+    console.log("EmailJS initialized:", emailjs);
 })();
 
 // Navigation functionality
@@ -72,6 +73,7 @@ function initPortfolioFilters() {
 function initContactForm() {
     const form = document.getElementById('contact-form');
     
+   
     form.addEventListener('submit', async (e) => {
         e.preventDefault();
         
@@ -81,7 +83,7 @@ function initContactForm() {
             from_email: formData.get('email'),
             subject: formData.get('subject'),
             message: formData.get('message'),
-            to_email: 'Janeeshapaba@gmail.com'
+            // to_email: 'Janeeshapaba@gmail.com'
         };
 
         try {
@@ -101,9 +103,11 @@ function initContactForm() {
             // Success
             showToast('Message sent successfully! I\'ll get back to you soon.', 'success');
             form.reset();
+           
             
         } catch (error) {
-            console.error('EmailJS error:', error);
+            
+           
             showToast('Failed to send message. Please try again or contact me directly.', 'error');
         } finally {
             // Restore button state
