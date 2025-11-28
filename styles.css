@@ -19,7 +19,7 @@ body {
 /* CSS Variables */
 :root {
     /* Colors */
-    --primary: hsl(220, 13%, 69%);
+    --primary: hsl(222, 52%, 29%);
     --primary-light: hsl(222, 52%, 29%);
      /* hsl(220, 13%, 75%); */
     --primary-lighter: hsl(222, 52%, 29%);
@@ -27,7 +27,7 @@ body {
     --accent: hsl(12, 6%, 15%);
     --secondary: hsl(210, 11%, 71%);
     --background: hsl(0, 0%, 100%);
-    --foreground: hsl(222, 47%, 11%);
+    --foreground: hsl(222, 52%, 29%);
     --muted: hsl(210, 40%, 98%);
     --muted-foreground: hsl(215, 13%, 65%);
     --border: hsl(214, 32%, 91%);
@@ -308,12 +308,14 @@ h1, h2, h3, h4, h5, h6 {
 .gradient-text {
     background: var(--gradient-primary);
     -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
+  
     background-clip: text;
 }
+  /* -webkit-text-fill-color: transparent; */
 
 .hero-description {
     font-size: 1.25rem;
+    font-family: sans-serif;
     color: var(--muted-foreground);
     margin-bottom: 2rem;
     line-height: 1.75;
@@ -377,7 +379,7 @@ h1, h2, h3, h4, h5, h6 {
 }
 
 .btn-primary {
-    background: var(--gradient-primary);
+    background: var(--primary);
     color: white;
     box-shadow: var(--shadow-medium);
 }
@@ -765,7 +767,7 @@ section {
 
 .filter-btn.active,
 .filter-btn:hover {
-    background: var(--gradient-primary);
+    background: var(--primary);
     color: white;
 }
 
@@ -834,7 +836,7 @@ section {
     position: absolute;
     top: 1rem;
     left: 1rem;
-    background: var(--gradient-primary);
+    background: var(--primary);
     color: white;
     padding: 0.25rem 0.75rem;
     border-radius: 9999px;
