@@ -1,14 +1,16 @@
 import { Button } from '@/components/ui/button';
-import { Mail, Linkedin, Phone, Heart } from 'lucide-react';
+import { Mail, Linkedin, Phone } from 'lucide-react';
 
 const Footer = () => {
   const currentYear = new Date().getFullYear();
 
-  const scrollToTop = () => {
+  const scrollToTop = (e: React.MouseEvent<HTMLButtonElement>) => {
+    e.preventDefault();
     window.scrollTo({ top: 0, behavior: 'smooth' });
   };
 
-  const scrollToSection = (sectionId: string) => {
+  const scrollToSection = (e: React.MouseEvent<HTMLButtonElement>, sectionId: string) => {
+    e.preventDefault();
     const element = document.querySelector(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -42,6 +44,15 @@ const Footer = () => {
     }
   ];
 
+  const handleSocialClick = (e: React.MouseEvent<HTMLButtonElement>, href: string) => {
+    e.preventDefault();
+    if (href.startsWith('http')) {
+      window.open(href, '_blank', 'noopener,noreferrer');
+    } else {
+      window.location.href = href;
+    }
+  };
+
   return (
     <footer className="bg-gradient-soft border-t border-border">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
@@ -51,6 +62,7 @@ const Footer = () => {
             <button 
               onClick={scrollToTop}
               className="font-heading text-2xl font-semibold text-primary hover:text-primary-light transition-colors"
+              type="button"
             >
               Janeesha Pabasara
             </button>
@@ -67,8 +79,9 @@ const Footer = () => {
                   variant="outline"
                   size="sm"
                   className="p-2 border-primary/20 hover:border-primary hover:bg-primary/10"
-                  onClick={() => window.open(social.href, '_blank')}
+                  onClick={(e) => handleSocialClick(e, social.href)}
                   aria-label={social.label}
+                  type="button"
                 >
                   <social.icon className="h-4 w-4" />
                 </Button>
@@ -83,8 +96,9 @@ const Footer = () => {
               {footerLinks.map((link, index) => (
                 <button
                   key={index}
-                  onClick={() => scrollToSection(link.href)}
+                  onClick={(e) => scrollToSection(e, link.href)}
                   className="text-muted-foreground hover:text-primary transition-colors text-left text-sm"
+                  type="button"
                 >
                   {link.label}
                 </button>
@@ -129,7 +143,6 @@ const Footer = () => {
             </div>
           </div>
         </div>
-
       </div>
     </footer>
   );

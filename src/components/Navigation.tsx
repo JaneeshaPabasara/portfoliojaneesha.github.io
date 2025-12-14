@@ -24,7 +24,8 @@ const Navigation = () => {
     { href: '#contact', label: 'Contact' },
   ];
 
-  const scrollToSection = (href: string) => {
+  const scrollToSection = (e: React.MouseEvent<HTMLButtonElement>, href: string) => {
+    e.preventDefault();
     const element = document.querySelector(href);
     if (element) {
       element.scrollIntoView({ behavior: 'smooth' });
@@ -43,8 +44,9 @@ const Navigation = () => {
           {/* Logo */}
           <div className="flex-shrink-0">
             <button 
-              onClick={() => scrollToSection('#home')}
+              onClick={(e) => scrollToSection(e, '#home')}
               className="font-heading font-semibold text-xl text-primary hover:text-primary-light transition-colors"
+              type="button"
             >
               Janeesha Pabasara
             </button>
@@ -56,8 +58,9 @@ const Navigation = () => {
               {navItems.map((item) => (
                 <button
                   key={item.href}
-                  onClick={() => scrollToSection(item.href)}
+                  onClick={(e) => scrollToSection(e, item.href)}
                   className="text-foreground hover:text-primary px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-secondary/50"
+                  type="button"
                 >
                   {item.label}
                 </button>
@@ -71,6 +74,7 @@ const Navigation = () => {
               variant="ghost"
               size="sm"
               onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
+              type="button"
             >
               {isMobileMenuOpen ? (
                 <X className="h-6 w-6" />
@@ -89,8 +93,9 @@ const Navigation = () => {
             {navItems.map((item) => (
               <button
                 key={item.href}
-                onClick={() => scrollToSection(item.href)}
+                onClick={(e) => scrollToSection(e, item.href)}
                 className="text-foreground hover:text-primary hover:bg-secondary/50 block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors"
+                type="button"
               >
                 {item.label}
               </button>
