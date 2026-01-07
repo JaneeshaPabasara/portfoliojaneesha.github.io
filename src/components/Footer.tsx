@@ -54,19 +54,19 @@ const Footer = () => {
   };
 
   return (
-    <footer className="bg-gradient-soft border-t border-border">
+    <footer className="bg-[#F8F9FA] border-t border-gray-200">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
           {/* Brand & Description */}
           <div className="space-y-4">
             <button 
               onClick={scrollToTop}
-              className="font-heading text-2xl font-semibold text-primary hover:text-primary-light transition-colors"
+              className="font-sans text-2xl font-semibold text-gray-900 hover:text-gray-700 transition-colors"
               type="button"
             >
               Janeesha Pabasara
             </button>
-            <p className="text-muted-foreground leading-relaxed max-w-sm">
+            <p className="text-gray-600 leading-relaxed max-w-sm">
               Passionate UI/UX Designer creating intuitive and visually stunning user experiences. 
               Specializing in wireframing, prototyping, and visual design.
             </p>
@@ -78,7 +78,7 @@ const Footer = () => {
                   key={index}
                   variant="outline"
                   size="sm"
-                  className="p-2 border-primary/20 hover:border-primary hover:bg-primary/10"
+                  className="p-2 border-gray-300 hover:border-gray-900 hover:bg-gray-100"
                   onClick={(e) => handleSocialClick(e, social.href)}
                   aria-label={social.label}
                   type="button"
@@ -91,13 +91,13 @@ const Footer = () => {
 
           {/* Quick Links */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Quick Links</h4>
+            <h4 className="font-semibold text-gray-900">Quick Links</h4>
             <div className="grid grid-cols-2 gap-2">
               {footerLinks.map((link, index) => (
                 <button
                   key={index}
                   onClick={(e) => scrollToSection(e, link.href)}
-                  className="text-muted-foreground hover:text-primary transition-colors text-left text-sm"
+                  className="text-gray-600 hover:text-gray-900 transition-colors text-left text-sm"
                   type="button"
                 >
                   {link.label}
@@ -108,36 +108,36 @@ const Footer = () => {
 
           {/* Contact Info */}
           <div className="space-y-4">
-            <h4 className="font-semibold text-foreground">Get in Touch</h4>
+            <h4 className="font-semibold text-gray-900">Get in Touch</h4>
             <div className="space-y-2">
-              <p className="text-muted-foreground text-sm">
+              <p className="text-gray-600 text-sm">
                 <strong>Email:</strong>{' '}
                 <a 
                   href="mailto:Janeeshapaba@gmail.com" 
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-gray-900 transition-colors"
                 >
                   Janeeshapaba@gmail.com
                 </a>
               </p>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-gray-600 text-sm">
                 <strong>Phone:</strong>{' '}
                 <a 
                   href="tel:+94766139452" 
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-gray-900 transition-colors"
                 >
                   +94 76 613 9452
                 </a>
               </p>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-gray-600 text-sm">
                 <strong>Alternative:</strong>{' '}
                 <a 
                   href="tel:+94725139452" 
-                  className="hover:text-primary transition-colors"
+                  className="hover:text-gray-900 transition-colors"
                 >
                   +94 72 513 9452
                 </a>
               </p>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-gray-600 text-sm">
                 <strong>Location:</strong> Colombo, Sri Lanka
               </p>
             </div>

@@ -1,6 +1,6 @@
 import { Button } from '@/components/ui/button';
-import { ArrowDown, Mail, Linkedin, ExternalLink } from 'lucide-react';
-import profileImage from '@/assets/profile-picture.jpg';
+import { ArrowRight } from 'lucide-react';
+import profileImage from '@/assets/dp.png';
 
 const HeroSection = () => {
   const scrollToContact = (e: React.MouseEvent<HTMLButtonElement>) => {
@@ -13,108 +13,78 @@ const HeroSection = () => {
     }
   };
 
-  const scrollToPortfolio = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    const element = document.querySelector('#portfolio');
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth'
-      });
-    }
-  };
-
-  const openLinkedIn = (e: React.MouseEvent<HTMLButtonElement>) => {
-    e.preventDefault();
-    window.open('https://linkedin.com/in/janeesha-pabasara-3128ba317', '_blank', 'noopener,noreferrer');
-  };
-
   return (
-    <section id="home" className="min-h-screen flex items-center justify-center bg-gradient-hero relative overflow-hidden">
-      {/* Background decoration */}
-      <div className="absolute inset-0 bg-gradient-soft opacity-50"></div>
-      <div className="absolute top-20 right-20 w-72 h-72 bg-primary/10 rounded-full blur-3xl animate-float"></div>
-      <div className="absolute bottom-20 left-20 w-96 h-96 bg-primary-light/10 rounded-full blur-3xl animate-float" style={{
-        animationDelay: '2s'
-      }}></div>
-      
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-16 pb-8 relative z-10">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+    <section id="home" className="min-h-screen flex items-center justify-center bg-white relative overflow-hidden">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-24 pb-16 relative z-10">
+        <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
           {/* Text Content */}
-          <div className="text-center lg:text-left animate-fade-in-up">
-            <h1 className="font-heading text-5xl sm:text-6xl font-bold mb-6 leading-tight text-slate-700 lg:text-6xl">
-              Hi, I'm{' '}
-              <span className="font-bold text-slate-700">
-                Janeesha
-              </span>
+          <div className="space-y-8 animate-fade-in-up">
+            <h1 className="font-sans text-6xl sm:text-7xl font-black leading-tight text-gray-900">
+              Designing for<br />
+              Amazing<br />
+              People
             </h1>
             
-            <p className="text-xl sm:text-2xl text-muted-foreground mb-4 font-light">
-              Creating intuitive and visually stunning user experiences
-            </p>
-            
-            <p className="text-lg text-muted-foreground mb-8 leading-relaxed max-w-2xl">
-              Passionate UI/UX Designer specializing in wireframing, prototyping, and visual design. 
-              Currently pursuing BSc. Hons in Information Technology at SLIIT University.
+            <p className="text-lg text-gray-500 max-w-md">
+              Designing user interfaces for over 10 years as visual designer
             </p>
 
-            {/* Skills Preview */}
-            <div className="flex flex-wrap gap-3 mb-8 justify-center lg:justify-start">
-              {['UI/UX Design', 'Wireframing', 'Prototyping', 'Visual Design'].map(skill => (
-                <span key={skill} className="px-4 py-2 bg-secondary text-secondary-foreground rounded-full text-sm font-medium shadow-soft">
-                  {skill}
-                </span>
-              ))}
-            </div>
+            {/* CTA Button */}
+            <Button 
+              onClick={scrollToContact} 
+              size="lg" 
+              className="bg-[#BCEEFF] hover:bg-[#BCEEFF]/90 text-gray-900 rounded-full px-8 py-6 text-base font-semibold shadow-none hover:shadow-sm transition-all group"
+              type="button"
+            >
+              Hire Me!
+              <div className="ml-2 bg-gray-900 rounded-full p-1.5 group-hover:translate-x-1 transition-transform">
+                <ArrowRight className="h-4 w-4 text-white" />
+              </div>
+            </Button>
 
-            {/* CTA Buttons */}
-            <div className="flex flex-col sm:flex-row gap-4 justify-center lg:justify-start mb-8">
-              <Button 
-                onClick={scrollToContact} 
-                size="lg" 
-                className="bg-gradient-primary hover:opacity-90 text-white shadow-medium hover-lift"
-                type="button"
-              >
-                <Mail className="mr-2 h-5 w-5" />
-                Let's Work Together
-              </Button>
-              
-              <Button 
-                variant="outline" 
-                size="lg" 
-                className="border-primary text-primary hover:bg-primary hover:text-white transition-all duration-300" 
-                onClick={openLinkedIn}
-                type="button"
-              >
-                <Linkedin className="mr-2 h-5 w-5" />
-                LinkedIn Profile
-                <ExternalLink className="ml-2 h-4 w-4" />
-              </Button>
-            </div>
-
-            {/* Scroll indicator */}
-            <div className="animate-bounce mt-12">
-              <ArrowDown className="mx-auto h-6 w-6 text-muted-foreground" />
-            </div>
+            {/* Client Count */}
+      
           </div>
 
-          {/* Profile Image */}
-          <div className="flex justify-center lg:justify-end animate-scale-in" style={{
+          {/* Profile Image with Floating Tags */}
+          <div className="flex justify-center lg:justify-end animate-scale-in relative" style={{
             animationDelay: '0.3s'
           }}>
             <div className="relative">
-              <div className="absolute inset-0 bg-gradient-primary rounded-full blur-2xl opacity-30 scale-110 animate-float"></div>
-              <div className="relative w-80 h-80 lg:w-96 lg:h-96 rounded-full overflow-hidden shadow-strong border-8 border-background">
+              {/* Background Shapes */}
+              <div className="absolute top-0 -left-12 w-72 h-[500px] bg-[#DBFDE4] rounded-[100px] -z-10"></div>
+              <div className="absolute top-12 left-24 w-80 h-[480px] bg-[#BCEEFF] rounded-[100px] -z-10"></div>
+              
+              {/* Profile Image */}
+              <div className="relative w-[400px] h-[500px] overflow-visible z-10">
                 <img 
                   src={profileImage} 
                   alt="Janeesha Pabasara - UI/UX Designer" 
-                  className="w-full h-full object-cover hover-scale" 
+                  className="absolute 
+               top-1/2 left-1/2 
+               -translate-x-1/2 -translate-y-1/2
+               w-72 h-72 rounded-full
+               object-cover z-20" 
+                  style={{ objectPosition: 'center 20%' }}
                 />
               </div>
-              {/* Decorative elements */}
-              <div className="absolute -top-4 -right-4 w-8 h-8 bg-primary rounded-full animate-float"></div>
-              <div className="absolute -bottom-2 -left-2 w-6 h-6 bg-primary-light rounded-full animate-float" style={{
+
+              {/* Floating Tags */}
+              <div className="absolute top-20 -right-8 bg-[#DBFDE4] text-gray-900 px-6 py-3 rounded-full font-semibold text-sm shadow-sm animate-float z-30">
+                UI/UX Designer
+              </div>
+              
+              <div className="absolute top-[45%] -left-12 bg-[#BCEEFF] text-gray-900 px-6 py-3 rounded-full font-semibold text-sm shadow-sm animate-float z-30" style={{
+                animationDelay: '0.5s'
+              }}>
+                Webflow Developer
+              </div>
+              
+              <div className="absolute bottom-32 -right-8 bg-[#DBFDE4] text-gray-900 px-6 py-3 rounded-full font-semibold text-sm shadow-sm animate-float z-30" style={{
                 animationDelay: '1s'
-              }}></div>
+              }}>
+                Product Designer
+              </div>
             </div>
           </div>
         </div>

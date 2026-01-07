@@ -36,7 +36,7 @@ const Navigation = () => {
   return (
     <nav className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
       isScrolled 
-        ? 'bg-background/90 backdrop-blur-md shadow-soft border-b border-border' 
+        ? 'bg-white/90 backdrop-blur-md shadow-soft border-b border-gray-200' 
         : 'bg-transparent'
     }`}>
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -45,7 +45,7 @@ const Navigation = () => {
           <div className="flex-shrink-0">
             <button 
               onClick={(e) => scrollToSection(e, '#home')}
-              className="font-heading font-semibold text-xl text-primary hover:text-primary-light transition-colors"
+              className="font-sans font-semibold text-xl text-gray-900 hover:text-gray-700 transition-colors"
               type="button"
             >
               Janeesha Pabasara
@@ -59,7 +59,7 @@ const Navigation = () => {
                 <button
                   key={item.href}
                   onClick={(e) => scrollToSection(e, item.href)}
-                  className="text-foreground hover:text-primary px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-secondary/50"
+                  className="text-gray-900 hover:text-gray-700 px-3 py-2 rounded-lg text-sm font-medium transition-colors hover:bg-gray-100"
                   type="button"
                 >
                   {item.label}
@@ -88,13 +88,13 @@ const Navigation = () => {
 
       {/* Mobile Navigation */}
       {isMobileMenuOpen && (
-        <div className="md:hidden bg-background border-b border-border shadow-soft">
+        <div className="md:hidden bg-white border-b border-gray-200 shadow-soft">
           <div className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
             {navItems.map((item) => (
               <button
                 key={item.href}
                 onClick={(e) => scrollToSection(e, item.href)}
-                className="text-foreground hover:text-primary hover:bg-secondary/50 block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors"
+                className="text-gray-900 hover:text-gray-700 hover:bg-gray-100 block px-3 py-2 rounded-md text-base font-medium w-full text-left transition-colors"
                 type="button"
               >
                 {item.label}

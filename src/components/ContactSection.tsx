@@ -18,10 +18,8 @@ const ContactSection = () => {
   });
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  // Initialize EmailJS when component mounts
   useEffect(() => {
     emailjs.init("3p58NgnkVRV7JPiih");
-    console.log("EmailJS initialized");
   }, []);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
@@ -37,7 +35,6 @@ const ContactSection = () => {
     setIsSubmitting(true);
     
     try {
-      // Send email using EmailJS
       await emailjs.send(
         'service_xb2ol89',
         'template_0imedub',
@@ -56,7 +53,6 @@ const ContactSection = () => {
         description: "Thank you for your message. I'll get back to you soon!",
       });
       
-      // Clear form
       setFormData({
         name: '',
         email: '',
@@ -107,14 +103,14 @@ const ContactSection = () => {
   ];
 
   return (
-    <section id="contact" className="py-20 bg-background">
+    <section id="contact" className="py-20 bg-[#F8F9FA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
-          <h2 className="font-heading text-4xl font-bold mb-6 text-slate-700 sm:text-5xl">
-            Let's <span className="text-slate-700 text-5xl font-bold">Connect</span>
+          <h2 className="font-sans text-4xl font-bold mb-6 text-gray-900 sm:text-5xl">
+            Let's <span className="text-gray-900 text-5xl font-bold">Connect</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto leading-relaxed">
+          <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Ready to start your next project? I'd love to hear from you. 
             Let's discuss how we can create something amazing together.
           </p>
@@ -122,12 +118,12 @@ const ContactSection = () => {
 
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
           {/* Contact Form */}
-          <Card className="p-8 shadow-soft animate-fade-in-up" style={{ animationDelay: '0.2s' }}>
+          <Card className="p-8 shadow-soft animate-fade-in-up bg-white" style={{ animationDelay: '0.2s' }}>
             <div className="mb-8">
-              <h3 className="font-heading text-2xl font-semibold text-foreground mb-2">
+              <h3 className="font-sans text-2xl font-semibold text-gray-900 mb-2">
                 Send me a message
               </h3>
-              <p className="text-muted-foreground">
+              <p className="text-gray-600">
                 Fill out the form below and I'll get back to you as soon as possible.
               </p>
             </div>
@@ -194,7 +190,7 @@ const ContactSection = () => {
                 type="submit"
                 size="lg"
                 disabled={isSubmitting}
-                className="w-full bg-gradient-primary hover:opacity-90 text-white shadow-medium hover-lift"
+                className="w-full bg-gray-900 hover:bg-gray-800 text-white shadow-medium hover-lift"
               >
                 {isSubmitting ? (
                   <div className="flex items-center">
@@ -214,31 +210,31 @@ const ContactSection = () => {
           {/* Contact Information */}
           <div className="space-y-8 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             {/* Contact Details */}
-            <Card className="p-8 shadow-soft">
-              <h3 className="font-heading text-2xl font-semibold text-foreground mb-6">
+            <Card className="p-8 shadow-soft bg-white">
+              <h3 className="font-sans text-2xl font-semibold text-gray-900 mb-6">
                 Get in touch
               </h3>
               
               <div className="space-y-6">
                 {contactInfo.map((item, index) => (
                   <div key={index} className="flex items-start space-x-4 group">
-                    <div className="p-3 bg-primary/10 rounded-lg group-hover:bg-primary/20 transition-colors">
-                      <item.icon className="h-5 w-5 text-primary" />
+                    <div className="p-3 bg-[#BCEEFF] rounded-lg group-hover:bg-[#BCEEFF]/80 transition-colors">
+                      <item.icon className="h-5 w-5 text-gray-900" />
                     </div>
                     <div className="flex-1">
-                      <h4 className="font-semibold text-foreground mb-1">{item.label}</h4>
+                      <h4 className="font-semibold text-gray-900 mb-1">{item.label}</h4>
                       <a
                         href={item.href}
                         target={item.href.startsWith('http') ? '_blank' : '_self'}
                         rel={item.href.startsWith('http') ? 'noopener noreferrer' : ''}
-                        className="text-primary hover:text-primary-light transition-colors font-medium flex items-center group"
+                        className="text-gray-900 hover:text-gray-700 transition-colors font-medium flex items-center group"
                       >
                         {item.value}
                         {item.href.startsWith('http') && (
                           <ExternalLink className="ml-2 h-4 w-4 opacity-0 group-hover:opacity-100 transition-opacity" />
                         )}
                       </a>
-                      <p className="text-sm text-muted-foreground mt-1">
+                      <p className="text-sm text-gray-600 mt-1">
                         {item.description}
                       </p>
                     </div>
@@ -248,14 +244,14 @@ const ContactSection = () => {
             </Card>
 
             {/* Additional Info */}
-            <Card className="p-8 shadow-soft bg-gradient-hero">
+            <Card className="p-8 shadow-soft bg-[#DBFDE4]">
               <div className="flex items-start space-x-4 mb-6">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <Clock className="h-5 w-5 text-primary" />
+                <div className="p-3 bg-white rounded-lg">
+                  <Clock className="h-5 w-5 text-gray-900" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">Response Time</h4>
-                  <p className="text-muted-foreground">
+                  <h4 className="font-semibold text-gray-900 mb-2">Response Time</h4>
+                  <p className="text-gray-700">
                     I typically respond within 24 hours. For urgent projects, 
                     feel free to call or message me directly.
                   </p>
@@ -263,12 +259,12 @@ const ContactSection = () => {
               </div>
 
               <div className="flex items-start space-x-4">
-                <div className="p-3 bg-primary/10 rounded-lg">
-                  <MessageCircle className="h-5 w-5 text-primary" />
+                <div className="p-3 bg-white rounded-lg">
+                  <MessageCircle className="h-5 w-5 text-gray-900" />
                 </div>
                 <div>
-                  <h4 className="font-semibold text-foreground mb-2">Project Discussion</h4>
-                  <p className="text-muted-foreground">
+                  <h4 className="font-semibold text-gray-900 mb-2">Project Discussion</h4>
+                  <p className="text-gray-700">
                     I offer free consultations to discuss your project needs and 
                     provide initial recommendations.
                   </p>
@@ -277,18 +273,18 @@ const ContactSection = () => {
             </Card>
 
             {/* Social Call-to-Action */}
-            <Card className="p-8 shadow-soft bg-gradient-primary text-white">
+            <Card className="p-8 shadow-soft bg-gray-900 text-white">
               <div className="text-center">
-                <h4 className="font-heading text-xl font-semibold mb-4">
+                <h4 className="font-sans text-xl font-semibold mb-4">
                   Let's build something amazing together!
                 </h4>
-                <p className="mb-6 text-white/90">
+                <p className="mb-6 text-gray-300">
                   Whether it's a new project or just a friendly chat about design, 
                   I'm always excited to connect with fellow creatives and potential collaborators.
                 </p>
                 <Button
                   variant="outline"
-                  className="bg-white text-primary border-white hover:bg-white/90"
+                  className="bg-white text-gray-900 border-white hover:bg-gray-100"
                   onClick={() => window.open('https://linkedin.com/in/janeesha-pabasara-3128ba317', '_blank')}
                 >
                   <Linkedin className="mr-2 h-4 w-4" />
