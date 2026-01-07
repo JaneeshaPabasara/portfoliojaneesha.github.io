@@ -3,9 +3,11 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Badge } from '@/components/ui/badge';
 import { ExternalLink, Eye } from 'lucide-react';
-import vehicleProject from '@/assets/vehicle-project.jpg';
+import vehicleProject from '@/assets/baybat.png';
+import opulex from '@/assets/opulex.png';
+import SLR from '@/assets/slr.png';
 import cartoonApp from '@/assets/skribble1.png';
-import flowerApp from '@/assets/flower-app.jpg';
+import flowerApp from '@/assets/florio.png';
 import Aqualume from '@/assets/Aqualume 1.png';
 
 const PortfolioSection = () => {
@@ -14,15 +16,15 @@ const PortfolioSection = () => {
   const projects = [
     {
       id: 1,
-      title: 'Vehicle Selling Website',
-      description: 'Modern e-commerce platform for buying and selling vehicles with advanced search and filtering capabilities.',
-      image: vehicleProject,
+      title: 'Opulex - Multi-Property Marketplace',
+      description: 'Comprehensive platform for buying, selling, and renting vehicles, homes, and land with advanced search capabilities.',
+      image: opulex,
       category: 'Web Design',
-      technologies: ['Figma', 'Webflow', 'UI/UX Design'],
-      features: ['Responsive design across all devices', 'Advanced vehicle search and filtering', 'User-friendly booking system', 'Modern and clean interface'],
+      technologies: ['Figma', 'Web Design', 'UI/UX Design'],
+      features: ['Multi-category property listings', 'Advanced search and filtering', 'User-friendly booking system', 'Modern and clean interface'],
       type: 'Website',
       year: '2024',
-      projectUrl: ''
+      projectUrl: 'https://www.figma.com/proto/VhlnqQzKbGvgDmQaKqYZes/Home-page?page-id=47%3A9&node-id=100-614&viewport=782%2C-279%2C0.22&t=SQlirAAs2eEL5CmY-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=100%3A614'
     },
     {
       id: 2,
@@ -59,6 +61,30 @@ const PortfolioSection = () => {
       type: 'Mobile App',
       year: '2024',
       projectUrl: 'https://www.figma.com/proto/iPpCBhhCgtGbS8JmPWAczE/mobileApp?page-id=316%3A431&node-id=316-493&p=f&viewport=-356%2C162%2C0.32&t=cbFdyx04OuN9c4tk-1&scaling=scale-down&content-scaling=fixed'
+    },
+    {
+      id: 5,
+      title: 'SLR - Railway Ticket Reservation System',
+      description: 'Streamlined online platform for Sri Lanka Railways ticket booking with real-time availability and seat selection.',
+      image: SLR,
+      category: 'Web Design',
+      technologies: ['Figma', 'Web Design', 'Booking System'],
+      features: ['Real-time train schedules', 'Interactive seat selection', 'Secure payment integration', 'Ticket management system'],
+      type: 'Website',
+      year: '2024',
+      projectUrl: 'https://www.figma.com/proto/VhlnqQzKbGvgDmQaKqYZes/Home-page?page-id=6%3A376&node-id=249-649&viewport=231%2C106%2C0.19&t=LqsBqrSQzPkelO3o-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=249%3A649'
+    },
+    {
+      id: 6,
+      title: 'Baybat - Multi-Category E-Commerce Platform',
+      description: 'Comprehensive online marketplace offering electronics, fashion, home appliances, and vehicles with seamless shopping experience.',
+      image: vehicleProject,
+      category: 'Web Design',
+      technologies: ['Figma', 'E-commerce', 'Web App Design'],
+      features: ['Multi-category product listings', 'Smart product filtering', 'Secure checkout process', 'Vendor management system'],
+      type: 'Web App',
+      year: '2024',
+      projectUrl: 'https://www.figma.com/proto/VhlnqQzKbGvgDmQaKqYZes/Home-page?page-id=17%3A28&node-id=59-92&viewport=192%2C319%2C0.26&t=VEaYeK1tCnYm6nRx-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=59%3A92'
     }
   ];
 
