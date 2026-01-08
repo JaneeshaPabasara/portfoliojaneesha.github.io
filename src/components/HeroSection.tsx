@@ -20,13 +20,13 @@ const HeroSection = () => {
           {/* Text Content */}
           <div className="space-y-8 animate-fade-in-up">
             <h1 className="font-sans text-6xl sm:text-7xl font-black leading-tight text-gray-900">
-              Designing for<br />
-              Amazing<br />
-              People
+              Hi, I'm Janeesha<br />
+              UI/UX Designer &<br />
+              Creative Visionary
             </h1>
             
             <p className="text-lg text-gray-500 max-w-md">
-              Designing user interfaces for over 10 years as visual designer
+              Passionate about creating intuitive and visually stunning user experiences that bridge the gap between user needs and business goals. I specialize in wireframing, prototyping, and bringing digital ideas to life.
             </p>
 
             {/* CTA Button */}
