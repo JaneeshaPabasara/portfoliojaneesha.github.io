@@ -20,7 +20,7 @@ const SkillsSection = () => {
       icon: Zap,
       title: 'Prototyping',
       description: 'Bringing ideas to life through interactive prototypes',
-      skills: ['Interactive Prototypes', 'Micro-interactions', 'Animation Design', 'User Testing']
+      skills: ['Interactive Prototypes', 'Micro-interactions',  'User Testing']
     },
     {
       icon: Smartphone,
@@ -115,7 +115,7 @@ const SkillsSection = () => {
                 <div key={index} className="space-y-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium text-gray-900">{tool.name}</span>
-                    <span className="text-sm text-gray-600">{tool.proficiency}%</span>
+                    
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
                     <div className={`h-2 rounded-full ${tool.color} transition-all duration-1000 ease-out`} style={{ width: `${tool.proficiency}%` }}></div>
