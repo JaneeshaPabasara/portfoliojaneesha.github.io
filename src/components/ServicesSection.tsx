@@ -1,32 +1,39 @@
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
-import { Layers, Palette, Smartphone, Monitor, ArrowRight, CheckCircle } from 'lucide-react';
+import { ArrowRight, CheckCircle } from 'lucide-react';
+
+// Import your service images here
+// Replace these with your actual image paths
+import wireframingImage from '@/assets/proto.png';
+import visualDesignImage from '@/assets/brush.png';
+import mobileDesignImage from '@/assets/mobile.png';
+import webDesignImage from '@/assets/dd.png';
 
 const ServicesSection = () => {
   const services = [
     {
-      icon: Layers,
+      image: wireframingImage, // Changed from icon to image
       title: 'Wireframing & Prototyping',
       description: 'Transform your ideas into interactive prototypes that bring your vision to life.',
       features: ['Low & High Fidelity Wireframes', 'Interactive Prototypes', 'User Flow Mapping', 'Clickable Mockups'],
       bgColor: 'bg-[#DBFDE4]'
     },
     {
-      icon: Palette,
+      image: visualDesignImage, // Changed from icon to image
       title: 'Visual Design & UI/UX',
       description: 'Create stunning visual experiences that captivate users and drive engagement.',
       features: ['Modern UI Design', 'User Experience Design', 'Design Systems', 'Brand Integration'],
       bgColor: 'bg-[#BCEEFF]'
     },
     {
-      icon: Smartphone,
+      image: mobileDesignImage, // Changed from icon to image
       title: 'Mobile App Design',
       description: 'Design intuitive mobile experiences that users love to interact with.',
       features: ['iOS & Android Design', 'Mobile-First Approach', 'Touch-Friendly Interfaces', 'App Store Optimization'],
       bgColor: 'bg-[#DBFDE4]'
     },
     {
-      icon: Monitor,
+      image: webDesignImage, // Changed from icon to image
       title: 'Website Design & Landing Pages',
       description: 'Build responsive web experiences that convert visitors into customers.',
       features: ['Responsive Web Design', 'Landing Page Optimization', 'E-commerce Design', 'Web Accessibility'],
@@ -63,10 +70,14 @@ const ServicesSection = () => {
               <div className={`absolute inset-0 ${service.bgColor} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
               
               <div className="relative z-10">
-                {/* Icon */}
+                {/* Image instead of Icon */}
                 <div className="mb-6">
                   <div className={`p-4 ${service.bgColor} rounded-xl inline-block`}>
-                    <service.icon className="h-8 w-8 text-gray-900" />
+                    <img 
+                      src={service.image} 
+                      alt={service.title}
+                      className="h-8 w-8 object-contain scale-[2]"
+                    />
                   </div>
                 </div>
 

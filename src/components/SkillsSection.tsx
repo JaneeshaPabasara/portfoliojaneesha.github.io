@@ -1,41 +1,53 @@
 import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
-import { Palette, Figma, Smartphone, Monitor, TestTube, RefreshCw, Layers, Zap } from 'lucide-react';
+import { Figma, RefreshCw, TestTube } from 'lucide-react';
+
+// Import your skill images here
+// Replace these with your actual image paths
+import visualDesignImage from '@/assets/brush.png';
+import uxDesignImage from '@/assets/man.png';
+import prototypingImage from '@/assets/proto.png';
+import mobileDesignImage from '@/assets/mobile.png';
+import webDesignImage from '@/assets/dd.png';
+import researchTestingImage from '@/assets/test.png';
+import iterativeImage from '@/assets/iterate.png';
+import testingImage from '@/assets/test.png';
+import figmaToolImage from '@/assets/design.png';
 
 const SkillsSection = () => {
   const skillCategories = [
     {
-      icon: Palette,
+      image: visualDesignImage, // Changed from icon to image
       title: 'Visual Design',
       description: 'Creating beautiful and cohesive visual experiences',
       skills: ['UI Design', 'Visual Design', 'Color Theory', 'Typography', 'Brand Identity']
     },
     {
-      icon: Layers,
+      image: uxDesignImage, // Changed from icon to image
       title: 'UX Design',
       description: 'Crafting user-centered design solutions',
       skills: ['User Research', 'Wireframing', 'User Journey Mapping', 'Information Architecture']
     },
     {
-      icon: Zap,
+      image: prototypingImage, // Changed from icon to image
       title: 'Prototyping',
       description: 'Bringing ideas to life through interactive prototypes',
       skills: ['Interactive Prototypes', 'Micro-interactions',  'User Testing']
     },
     {
-      icon: Smartphone,
+      image: mobileDesignImage, // Changed from icon to image
       title: 'Mobile Design',
       description: 'Designing seamless mobile experiences',
       skills: ['iOS Design', 'Android Design', 'Mobile UI Patterns', 'Responsive Design']
     },
     {
-      icon: Monitor,
+      image: webDesignImage, // Changed from icon to image
       title: 'Web Design',
       description: 'Creating engaging web interfaces and experiences',
       skills: ['Landing Pages', 'Web Applications', 'Responsive Layouts', 'Web Accessibility']
     },
     {
-      icon: TestTube,
+      image: researchTestingImage, // Changed from icon to image
       title: 'Research & Testing',
       description: 'Validating designs through user feedback',
       skills: ['Usability Testing', 'A/B Testing', 'User Interviews', 'Analytics Review']
@@ -51,12 +63,12 @@ const SkillsSection = () => {
 
   const processes = [
     {
-      icon: RefreshCw,
+      image: iterativeImage, // Changed from icon to image
       title: 'Iterative Design Process',
       description: 'Continuously refining designs based on feedback and testing results'
     },
     {
-      icon: TestTube,
+      image: testingImage, // Changed from icon to image
       title: 'Usability Testing',
       description: 'Regular testing with real users to validate design decisions'
     }
@@ -81,7 +93,11 @@ const SkillsSection = () => {
             <Card key={index} className="p-6 shadow-soft hover-lift transition-all duration-300 hover:shadow-medium animate-scale-in bg-white" style={{ animationDelay: `${index * 0.1}s` }}>
               <div className="flex items-center mb-4">
                 <div className="p-3 bg-[#BCEEFF] rounded-lg mr-4">
-                  <category.icon className="h-6 w-6 text-gray-900" />
+                  <img 
+                    src={category.image} 
+                    alt={category.title}
+                    className="h-6 w-6 object-contain scale-[2]"
+                  />
                 </div>
                 <h3 className="font-semibold text-xl text-gray-900">{category.title}</h3>
               </div>
@@ -106,7 +122,11 @@ const SkillsSection = () => {
           {/* Tools */}
           <Card className="p-8 shadow-soft animate-fade-in-up bg-white" style={{ animationDelay: '0.6s' }}>
             <h3 className="font-sans text-2xl font-semibold text-gray-900 mb-6 flex items-center">
-              <Figma className="mr-3 h-6 w-6 text-gray-900" />
+              <img 
+                src={figmaToolImage} 
+                alt="Design Tools"
+                className="mr-3 h-6 w-6 object-contain scale-[2]"
+              />
               Design Tools
             </h3>
             
@@ -115,7 +135,6 @@ const SkillsSection = () => {
                 <div key={index} className="space-y-2">
                   <div className="flex justify-between items-center">
                     <span className="font-medium text-gray-900">{tool.name}</span>
-                    
                   </div>
                   <div className="w-full bg-gray-200 rounded-full h-2">
                     <div className={`h-2 rounded-full ${tool.color} transition-all duration-1000 ease-out`} style={{ width: `${tool.proficiency}%` }}></div>
@@ -135,7 +154,11 @@ const SkillsSection = () => {
               {processes.map((process, index) => (
                 <div key={index} className="flex items-start space-x-4">
                   <div className="p-3 bg-[#DBFDE4] rounded-lg flex-shrink-0">
-                    <process.icon className="h-5 w-5 text-gray-900" />
+                    <img 
+                      src={process.image} 
+                      alt={process.title}
+                      className="h-6 w-6 object-contain scale-[2]"
+                    />
                   </div>
                   <div>
                     <h4 className="font-semibold text-gray-900 mb-2">{process.title}</h4>
