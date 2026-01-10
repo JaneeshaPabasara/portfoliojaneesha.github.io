@@ -6,6 +6,9 @@ import { ExternalLink, Eye } from 'lucide-react';
 import vehicleProject from '@/assets/baybat.png';
 import opulex from '@/assets/opulex.png';
 import SLR from '@/assets/slr.png';
+import L1 from '@/assets/landing1.jpg';
+import L2 from '@/assets/landing2.jpg';
+import L3 from '@/assets/landing3.jpg';
 import cartoonApp from '@/assets/skribble1.png';
 import flowerApp from '@/assets/florio.png';
 import Aqualume from '@/assets/Aqualume 1.png';
@@ -85,6 +88,42 @@ const PortfolioSection = () => {
       type: 'Web App',
       year: '2024',
       projectUrl: 'https://www.figma.com/proto/VhlnqQzKbGvgDmQaKqYZes/Home-page?page-id=17%3A28&node-id=59-92&viewport=192%2C319%2C0.26&t=VEaYeK1tCnYm6nRx-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=59%3A92'
+    },
+     // NEW LANDING PAGE PROJECTS
+    {
+      id: 7,
+      title: 'Modern Tech Landing Page',
+      description: 'Clean and contemporary landing page design for a technology startup, featuring bold typography and engaging animations.',
+      image: L1, 
+      category: 'Landing Pages',
+      technologies: ['Figma', 'Landing Page', 'Web Design'],
+      features: ['Hero section with CTA', 'Feature highlights', 'Testimonials section', 'Contact form integration'],
+      type: 'Landing Page',
+      year: '2024',
+      projectUrl: '#' },
+    {
+      id: 8,
+      title: 'SaaS Product Landing Page',
+      description: 'Conversion-optimized landing page for a SaaS product with clear value proposition and feature showcase.',
+      image: L2, 
+      category: 'Landing Pages',
+      technologies: ['Figma', 'Landing Page', 'UX Design'],
+      features: ['Product demo section', 'Pricing tables', 'Feature comparison', 'Social proof'],
+      type: 'Landing Page',
+      year: '2024',
+      projectUrl: '#' 
+    },
+    {
+      id: 9,
+      title: 'Creative Agency Landing Page',
+      description: 'Bold and creative landing page design for a digital agency, showcasing portfolio and services.',
+      image: L3, 
+      category: 'Landing Pages',
+      technologies: ['Figma', 'Landing Page', 'Visual Design'],
+      features: ['Portfolio showcase', 'Service overview', 'Team introduction', 'Client testimonials'],
+      type: 'Landing Page',
+      year: '2024',
+      projectUrl: '#'
     }
   ];
 
