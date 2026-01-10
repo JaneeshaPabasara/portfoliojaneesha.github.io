@@ -108,7 +108,7 @@ const ContactSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="font-sans text-4xl font-bold mb-6 text-gray-900 sm:text-5xl">
-            Let's <span className="text-gray-900 text-5xl font-bold">Connect</span>
+            Let's Connect
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             Ready to start your next project? I'd love to hear from you. 

@@ -80,7 +80,7 @@ const SkillsSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="font-sans text-4xl font-bold mb-6 text-gray-900 sm:text-5xl">
-            Skills & <span className="text-gray-900 font-bold text-5xl">Expertise</span>
+            Skills & Expertise
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             A comprehensive toolkit for creating exceptional user experiences across all platforms and touchpoints.

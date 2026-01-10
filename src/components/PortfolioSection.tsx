@@ -139,7 +139,7 @@ const PortfolioSection = () => {
         {/* Section Header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="font-sans text-4xl font-bold mb-6 text-gray-900 sm:text-5xl">
-            My <span className="text-5xl font-bold text-gray-900">Portfolio</span>
+            My Portfolio
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto leading-relaxed">
             A showcase of my recent work, featuring innovative solutions that blend creativity 
