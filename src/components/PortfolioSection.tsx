@@ -228,37 +228,8 @@ const PortfolioSection = () => {
           ))}
         </div>
 
-        {/* Additional Projects Showcase */}
-        <Card className="p-8 shadow-medium bg-[#DBFDE4] animate-fade-in-up" style={{ animationDelay: '1s' }}>
-          <div className="text-center mb-8">
-            <h3 className="font-sans text-3xl font-semibold text-gray-900 mb-4">
-              More Projects Coming Soon
-            </h3>
-            <p className="text-gray-700 max-w-2xl mx-auto">
-              I'm constantly working on new and exciting projects. Each one is an opportunity to 
-              push creative boundaries and deliver innovative solutions.
-            </p>
-          </div>
-
-          <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {[
-              { title: 'E-commerce Platform', status: 'In Progress', type: 'Web Design' },
-              { title: 'Healthcare App', status: 'Planning', type: 'Mobile App' },
-              { title: 'Portfolio Website', status: 'Concept', type: 'Landing Page' }
-            ].map((item, index) => (
-              <div key={index} className="text-center p-6 bg-white rounded-lg">
-                <div className="w-16 h-16 bg-gray-900 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <ExternalLink className="h-6 w-6 text-white" />
-                </div>
-                <h4 className="font-semibold text-gray-900 mb-2">{item.title}</h4>
-                <p className="text-sm text-gray-600 mb-2">{item.type}</p>
-                <Badge variant="secondary" className="text-xs bg-[#BCEEFF] text-gray-900">
-                  {item.status}
-                </Badge>
-              </div>
-            ))}
-          </div>
-        </Card>
+      
+        
 
         {/* Call to Action */}
         <div className="text-center mt-16">

@@ -19,14 +19,15 @@ const HeroSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
           {/* Text Content */}
           <div className="space-y-6 lg:space-y-8 animate-fade-in-up text-center lg:text-left">
-            <h1 className="font-sans text-3xl sm:text-4xl md:text-5xl lg:text-4xl xl:text-5xl font-black leading-tight text-gray-900">
-              Hi, I'm Janeesha<br />
-              UI/UX Designer &<br />
-              Creative Visionary
+            <h1 className="font-sans text-5xl font-bold mb-6 text-gray-900 sm:text-6xl">
+              Hi
             </h1>
+            <h2 className="font-sans text-4xl font-bold mb-6 text-gray-900 sm:text-5xl">I'm Janeesha<br />
+              UI/UX Designer
+            </h2>
             
             <p className="text-base sm:text-lg text-gray-500 max-w-md mx-auto lg:mx-0">
-              Passionate about creating intuitive and visually stunning user experiences that bridge the gap between user needs and business goals. I specialize in wireframing, prototyping, and bringing digital ideas to life.
+              I design intuitive, visually engaging experiences that connect users and business goals.
             </p>
 
             {/* CTA Button */}
