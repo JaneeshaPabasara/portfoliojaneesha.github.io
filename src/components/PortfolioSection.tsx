@@ -89,7 +89,6 @@ const PortfolioSection = () => {
       year: '2024',
       projectUrl: 'https://www.figma.com/proto/VhlnqQzKbGvgDmQaKqYZes/Home-page?page-id=17%3A28&node-id=59-92&viewport=192%2C319%2C0.26&t=VEaYeK1tCnYm6nRx-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=59%3A92'
     },
-     // NEW LANDING PAGE PROJECTS
     {
       id: 7,
       title: 'Modern Tech Landing Page',
@@ -100,7 +99,8 @@ const PortfolioSection = () => {
       features: ['Hero section with CTA', 'Feature highlights', 'Testimonials section', 'Contact form integration'],
       type: 'Landing Page',
       year: '2024',
-      projectUrl: '#' },
+      projectUrl: '#' 
+    },
     {
       id: 8,
       title: 'SaaS Product Landing Page',
@@ -167,108 +167,114 @@ const PortfolioSection = () => {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {filteredProjects.map((project, index) => (
             <Card key={project.id} className="overflow-hidden shadow-soft hover-lift transition-all duration-300 hover:shadow-medium animate-scale-in group bg-white" style={{ animationDelay: `${index * 0.2}s` }}>
-              {/* Project Image */}
-              <div className="relative overflow-hidden aspect-video">
-                <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
-                <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
-                
-                {/* Overlay Actions */}
-                <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <div className="flex space-x-4">
-                    <Button size="sm" className="bg-white text-black hover:bg-white/90">
-                      <Eye className="mr-2 h-4 w-4" />
-                      View Details
-                    </Button>
-                  </div>
+              {/* Landing Pages - Image Only */}
+              {project.category === 'Landing Pages' ? (
+                <div className="relative overflow-hidden aspect-video">
+                  <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                 </div>
+              ) : (
+                <>
+                  {/* Project Image */}
+                  <div className="relative overflow-hidden aspect-video">
+                    <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
+                    <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
+                    
+                    {/* Overlay Actions */}
+                    <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+                      <div className="flex space-x-4">
+                        <Button size="sm" className="bg-white text-black hover:bg-white/90">
+                          <Eye className="mr-2 h-4 w-4" />
+                          View Details
+                        </Button>
+                      </div>
+                    </div>
 
-                {/* Project Category Badge */}
-                <div className="absolute top-4 left-4">
-                  <Badge className="bg-[#BCEEFF] text-gray-900">
-                    {project.category}
-                  </Badge>
-                </div>
-              </div>
-
-              {/* Project Content */}
-              <div className="p-6">
-                <div className="flex justify-between items-start mb-4">
-                  <div>
-                    <h3 className="font-sans text-xl font-semibold text-gray-900 mb-2">
-                      {project.title}
-                    </h3>
-                    <div className="flex items-center text-sm text-gray-600 mb-3">
-                      <span>{project.type}</span>
-                      <span className="mx-2">•</span>
-                      <span>{project.year}</span>
+                    {/* Project Category Badge */}
+                    <div className="absolute top-4 left-4">
+                      <Badge className="bg-[#BCEEFF] text-gray-900">
+                        {project.category}
+                      </Badge>
                     </div>
                   </div>
-                </div>
 
-                <p className="text-gray-600 mb-4 leading-relaxed">
-                  {project.description}
-                </p>
-
-                {/* Technologies */}
-                <div className="flex flex-wrap gap-2 mb-4">
-                  {project.technologies.map((tech, techIndex) => (
-                    <Badge key={techIndex} variant="secondary" className="text-xs bg-[#DBFDE4] text-gray-900">
-                      {tech}
-                    </Badge>
-                  ))}
-                </div>
-
-                {/* Features */}
-                <div className="space-y-2 mb-6">
-                  {project.features.map((feature, featureIndex) => (
-                    <div key={featureIndex} className="flex items-center text-sm">
-                      <div className="w-1.5 h-1.5 bg-gray-900 rounded-full mr-3 flex-shrink-0"></div>
-                      <span className="text-gray-600">{feature}</span>
+                  {/* Project Content */}
+                  <div className="p-6">
+                    <div className="flex justify-between items-start mb-4">
+                      <div>
+                        <h3 className="font-sans text-xl font-semibold text-gray-900 mb-2">
+                          {project.title}
+                        </h3>
+                        <div className="flex items-center text-sm text-gray-600 mb-3">
+                          <span>{project.type}</span>
+                          <span className="mx-2">•</span>
+                          <span>{project.year}</span>
+                        </div>
+                      </div>
                     </div>
-                  ))}
-                </div>
 
-                {/* Action Buttons */}
-                <div className="flex space-x-3">
-                  {project.projectUrl ? (
-                    <>
-                      <Button 
-                        variant="outline" 
-                        size="sm" 
-                        className="flex-1 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white"
-                        onClick={() => window.open(project.projectUrl, '_blank', 'noopener,noreferrer')}
-                      >
-                        <Eye className="mr-2 h-4 w-4" />
-                        View Project
-                      </Button>
-                      <Button 
-                        variant="outline" 
-                        size="sm" 
-                        className="border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white"
-                        onClick={() => window.open(project.projectUrl, '_blank', 'noopener,noreferrer')}
-                      >
-                        <ExternalLink className="h-4 w-4" />
-                      </Button>
-                    </>
-                  ) : (
-                    <>
-                      <Button variant="outline" size="sm" className="flex-1 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white">
-                        <Eye className="mr-2 h-4 w-4" />
-                        View Project
-                      </Button>
-                      <Button variant="outline" size="sm" className="border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white">
-                        <ExternalLink className="h-4 w-4" />
-                      </Button>
-                    </>
-                  )}
-                </div>
-              </div>
+                    <p className="text-gray-600 mb-4 leading-relaxed">
+                      {project.description}
+                    </p>
+
+                    {/* Technologies */}
+                    <div className="flex flex-wrap gap-2 mb-4">
+                      {project.technologies.map((tech, techIndex) => (
+                        <Badge key={techIndex} variant="secondary" className="text-xs bg-[#DBFDE4] text-gray-900">
+                          {tech}
+                        </Badge>
+                      ))}
+                    </div>
+
+                    {/* Features */}
+                    <div className="space-y-2 mb-6">
+                      {project.features.map((feature, featureIndex) => (
+                        <div key={featureIndex} className="flex items-center text-sm">
+                          <div className="w-1.5 h-1.5 bg-gray-900 rounded-full mr-3 flex-shrink-0"></div>
+                          <span className="text-gray-600">{feature}</span>
+                        </div>
+                      ))}
+                    </div>
+
+                    {/* Action Buttons */}
+                    <div className="flex space-x-3">
+                      {project.projectUrl ? (
+                        <>
+                          <Button 
+                            variant="outline" 
+                            size="sm" 
+                            className="flex-1 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white"
+                            onClick={() => window.open(project.projectUrl, '_blank', 'noopener,noreferrer')}
+                          >
+                            <Eye className="mr-2 h-4 w-4" />
+                            View Project
+                          </Button>
+                          <Button 
+                            variant="outline" 
+                            size="sm" 
+                            className="border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white"
+                            onClick={() => window.open(project.projectUrl, '_blank', 'noopener,noreferrer')}
+                          >
+                            <ExternalLink className="h-4 w-4" />
+                          </Button>
+                        </>
+                      ) : (
+                        <>
+                          <Button variant="outline" size="sm" className="flex-1 border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white">
+                            <Eye className="mr-2 h-4 w-4" />
+                            View Project
+                          </Button>
+                          <Button variant="outline" size="sm" className="border-gray-600 text-gray-600 hover:bg-gray-600 hover:text-white">
+                            <ExternalLink className="h-4 w-4" />
+                          </Button>
+                        </>
+                      )}
+                    </div>
+                  </div>
+                </>
+              )}
             </Card>
           ))}
         </div>
-
-      
-        
 
         {/* Call to Action */}
         <div className="text-center mt-16">
