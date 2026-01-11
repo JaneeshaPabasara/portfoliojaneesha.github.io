@@ -21,10 +21,10 @@ const HeroSection = () => {
           {/* Text Content */}
           <div className="space-y-4 sm:space-y-6 lg:space-y-8 animate-fade-in-up">
             <div className="leading-none">
-              <h1 className="font-sans text-5xl sm:text-6xl lg:text-7xl font-black text-gray-900 mb-0">
+              <h1 className="font- open sans text-5xl sm:text-6xl lg:text-7xl font-semibold text-gray-900 mb-0">
                 Hi
               </h1>
-              <h2 className="font-sans text-3xl sm:text-4xl lg:text-5xl font-black text-gray-900 mt-0 leading-tight">
+              <h2 className="font-open sans text-3xl sm:text-4xl lg:text-5xl font-semibold text-gray-900 mt-0 leading-tight">
                 I'm Janeesha<br />
                 UI/UX Designer 
               </h2>

@@ -79,13 +79,7 @@ const ContactSection = () => {
       href: 'mailto:Janeeshapaba@gmail.com',
       description: 'Send me an email anytime'
     },
-    {
-      icon: Phone,
-      label: 'Phone',
-      value: '+94 76 613 9452',
-      href: 'tel:+94766139452',
-      description: 'Call or WhatsApp me'
-    },
+
     {
       icon: Linkedin,
       label: 'LinkedIn',
@@ -258,18 +252,7 @@ const ContactSection = () => {
                 </div>
               </div>
 
-              <div className="flex items-start space-x-4">
-                <div className="p-3 bg-white rounded-lg">
-                  <MessageCircle className="h-5 w-5 text-gray-900" />
-                </div>
-                <div>
-                  <h4 className="font-semibold text-gray-900 mb-2">Project Discussion</h4>
-                  <p className="text-gray-700">
-                    I offer free consultations to discuss your project needs and 
-                    provide initial recommendations.
-                  </p>
-                </div>
-              </div>
+              
             </Card>
 
             {/* Social Call-to-Action */}

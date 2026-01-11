@@ -32,11 +32,7 @@ const Footer = () => {
       label: 'Email',
       href: 'mailto:Janeeshapaba@gmail.com'
     },
-    {
-      icon: Phone,
-      label: 'Phone',
-      href: 'tel:+94766139452'
-    },
+
     {
       icon: Linkedin,
       label: 'LinkedIn',
@@ -119,24 +115,8 @@ const Footer = () => {
                   Janeeshapaba@gmail.com
                 </a>
               </p>
-              <p className="text-gray-600 text-sm">
-                <strong>Phone:</strong>{' '}
-                <a 
-                  href="tel:+94766139452" 
-                  className="hover:text-gray-900 transition-colors"
-                >
-                  +94 76 613 9452
-                </a>
-              </p>
-              <p className="text-gray-600 text-sm">
-                <strong>Alternative:</strong>{' '}
-                <a 
-                  href="tel:+94725139452" 
-                  className="hover:text-gray-900 transition-colors"
-                >
-                  +94 72 513 9452
-                </a>
-              </p>
+              
+              
               <p className="text-gray-600 text-sm">
                 <strong>Location:</strong> Colombo, Sri Lanka
               </p>
