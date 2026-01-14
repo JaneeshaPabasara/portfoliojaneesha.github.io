@@ -24,7 +24,7 @@ const PortfolioSection = () => {
       image: opulex,
       category: 'Web Design',
       technologies: ['Figma', 'Web Design', 'UI/UX Design'],
-      features: ['Multi-category property listings', 'Advanced search and filtering', 'User-friendly booking system', 'Modern and clean interface'],
+      features: ['Multi-category property listings', 'Advanced search and filtering', 'Detailed property listings with images', 'Modern and clean interface'],
       type: 'Website',
       year: '2024',
       projectUrl: 'https://www.figma.com/proto/VhlnqQzKbGvgDmQaKqYZes/Home-page?page-id=47%3A9&node-id=100-614&viewport=782%2C-279%2C0.22&t=SQlirAAs2eEL5CmY-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=100%3A614'
@@ -44,11 +44,11 @@ const PortfolioSection = () => {
     {
       id: 3,
       title: 'Florio - Flower Shop Mobile App',
-      description: 'E-commerce mobile application for a flower shop with custom bouquet creation and delivery tracking.',
+      description: 'Flower ordering app with customizable bouquets, separate item selections, and occasion-based recommendations.',
       image: flowerApp,
       category: 'Mobile App',
       technologies: ['Figma', 'E-commerce', 'Mobile UX'],
-      features: ['Custom bouquet builder', 'Real-time delivery tracking', 'Seamless checkout process', 'Beautiful product gallery'],
+      features: ['Custom bouquet builder', 'Occasion-based recommendations', 'Seamless checkout process', 'Beautiful product gallery'],
       type: 'Mobile App',
       year: '2024',
       projectUrl: 'https://www.figma.com/proto/iPpCBhhCgtGbS8JmPWAczE/mobileApp?page-id=154%3A55&node-id=195-437&p=f&viewport=381%2C68%2C0.46&t=TkXqfnY4aJSnzEdr-1&scaling=scale-down&content-scaling=fixed'
@@ -56,11 +56,11 @@ const PortfolioSection = () => {
     {
       id: 4,
       title: 'Aqualume - Habit Tracker',
-      description: 'Mobile habit tracking application designed to help users build better habits and maintain streaks with beautiful visualizations.',
+      description: 'Mobile habit tracking application designed to help users build better habits through consistent tracking and beautiful visualizations.',
       image: Aqualume,
       category: 'Mobile App',
       technologies: ['Figma', 'Mobile UI', 'UX Design'],
-      features: ['Daily habit tracking', 'Progress visualization', 'Streak maintenance', 'Motivational reminders'],
+      features: ['Daily habit tracking', 'Progress visualization', 'Goal & Target Setting', 'Scheduled reminders'],
       type: 'Mobile App',
       year: '2024',
       projectUrl: 'https://www.figma.com/proto/iPpCBhhCgtGbS8JmPWAczE/mobileApp?page-id=316%3A431&node-id=316-493&p=f&viewport=-356%2C162%2C0.32&t=cbFdyx04OuN9c4tk-1&scaling=scale-down&content-scaling=fixed'
@@ -72,26 +72,26 @@ const PortfolioSection = () => {
       image: SLR,
       category: 'Web Design',
       technologies: ['Figma', 'Web Design', 'Booking System'],
-      features: ['Real-time train schedules', 'Interactive seat selection', 'Secure payment integration', 'Ticket management system'],
+      features: ['Real-time train schedules', 'Ticket status tracking', 'Ticket management system'],
       type: 'Website',
       year: '2024',
       projectUrl: 'https://www.figma.com/proto/VhlnqQzKbGvgDmQaKqYZes/Home-page?page-id=6%3A376&node-id=249-649&viewport=231%2C106%2C0.19&t=LqsBqrSQzPkelO3o-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=249%3A649'
     },
-    {
-      id: 6,
-      title: 'Baybat - Multi-Category E-Commerce Platform',
-      description: 'Comprehensive online marketplace offering electronics, fashion, home appliances, and vehicles with seamless shopping experience.',
-      image: vehicleProject,
-      category: 'Web Design',
-      technologies: ['Figma', 'E-commerce', 'Web App Design'],
-      features: ['Multi-category product listings', 'Smart product filtering', 'Secure checkout process', 'Vendor management system'],
-      type: 'Web App',
-      year: '2024',
-      projectUrl: 'https://www.figma.com/proto/VhlnqQzKbGvgDmQaKqYZes/Home-page?page-id=17%3A28&node-id=59-92&viewport=192%2C319%2C0.26&t=VEaYeK1tCnYm6nRx-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=59%3A92'
-    },
+    // {
+    //   id: 6,
+    //   title: 'Baybat - Multi-Category E-Commerce Platform',
+    //   description: 'Comprehensive online marketplace offering electronics, fashion, home appliances, and vehicles with seamless shopping experience.',
+    //   image: vehicleProject,
+    //   category: 'Web Design',
+    //   technologies: ['Figma', 'E-commerce', 'Web App Design'],
+    //   features: ['Multi-category product listings', 'Smart product filtering', 'Secure checkout process', 'Vendor management system'],
+    //   type: 'Web App',
+    //   year: '2024',
+    //   projectUrl: 'https://www.figma.com/proto/VhlnqQzKbGvgDmQaKqYZes/Home-page?page-id=17%3A28&node-id=59-92&viewport=192%2C319%2C0.26&t=VEaYeK1tCnYm6nRx-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=59%3A92'
+    // },
     {
       id: 7,
-      title: 'Modern Tech Landing Page',
+      title: 'Opulex Landing Page',
       description: 'Clean and contemporary landing page design for a technology startup, featuring bold typography and engaging animations.',
       image: L1, 
       category: 'Landing Pages',
@@ -103,7 +103,7 @@ const PortfolioSection = () => {
     },
     {
       id: 8,
-      title: 'SaaS Product Landing Page',
+      title: 'Artisans Landing Page',
       description: 'Conversion-optimized landing page for a SaaS product with clear value proposition and feature showcase.',
       image: L2, 
       category: 'Landing Pages',
@@ -115,7 +115,7 @@ const PortfolioSection = () => {
     },
     {
       id: 9,
-      title: 'Creative Agency Landing Page',
+      title: 'SLR Landing Page',
       description: 'Bold and creative landing page design for a digital agency, showcasing portfolio and services.',
       image: L3, 
       category: 'Landing Pages',

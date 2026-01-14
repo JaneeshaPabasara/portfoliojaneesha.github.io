@@ -42,14 +42,14 @@ const AboutSection = () => {
                 My Creative Journey
               </h3>
               <p className="text-gray-600 leading-relaxed mb-6">
-                I'm a passionate university student specializing in UI/UX design, driven by the belief 
-                that great design can transform how people interact with technology. My journey in design 
-                started with a curiosity about human behavior and a love for creating beautiful, functional solutions.
+                I am currently pursuing a Data Science–specialized degree at SLIIT, while actively exploring
+                my passion for UI/UX design. My interest in design comes from a love for creativity and a 
+                desire to craft unique, visually stunning, and user-friendly experiences.
               </p>
               <p className="text-gray-600 leading-relaxed mb-6">
-                Every project I work on is an opportunity to solve real problems and make a positive impact 
-                on users' lives. I approach each design challenge with empathy, creativity, and a commitment 
-                to excellence that pushes boundaries and exceeds expectations.
+                I enjoy transforming ideas into clean, minimal, and intuitive designs that focus on both aesthetics
+                and usability. For me, UI/UX design is about understanding users, thinking creatively, and building 
+                meaningful digital experiences that leave a lasting impression.
               </p>
             </div>
 

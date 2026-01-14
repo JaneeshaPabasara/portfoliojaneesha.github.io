@@ -246,8 +246,8 @@ const ContactSection = () => {
                 <div>
                   <h4 className="font-semibold text-gray-900 mb-2">Response Time</h4>
                   <p className="text-gray-700">
-                    I typically respond within 24 hours. For urgent projects, 
-                    feel free to call or message me directly.
+                    I typically respond within 24 hours. 
+                    You can reach out anytime.
                   </p>
                 </div>
               </div>
