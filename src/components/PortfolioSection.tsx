@@ -163,23 +163,23 @@ const PortfolioSection = () => {
           ))}
         </div>
 
-        {/* Projects Grid */}
+        {/* Projects grid */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
           {filteredProjects.map((project, index) => (
             <Card key={project.id} className="overflow-hidden shadow-soft hover-lift transition-all duration-300 hover:shadow-medium animate-scale-in group bg-white" style={{ animationDelay: `${index * 0.2}s` }}>
-              {/* Landing Pages - Image Only */}
+              {/* Landing pages - image only */}
               {project.category === 'Landing Pages' ? (
                 <div className="relative overflow-hidden aspect-video">
                   <img src={project.image} alt={project.title} className="w-full h-full object-cover" />
                 </div>
               ) : (
                 <>
-                  {/* Project Image */}
+                  {/* Project image */}
                   <div className="relative overflow-hidden aspect-video">
                     <img src={project.image} alt={project.title} className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" />
                     <div className="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-300"></div>
                     
-                    {/* Overlay Actions */}
+                    {/* Overlay actions */}
                     <div className="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                       <div className="flex space-x-4">
                         <Button size="sm" className="bg-white text-black hover:bg-white/90">
@@ -189,7 +189,7 @@ const PortfolioSection = () => {
                       </div>
                     </div>
 
-                    {/* Project Category Badge */}
+                    {/* Project category badge */}
                     <div className="absolute top-4 left-4">
                       <Badge className="bg-[#BCEEFF] text-gray-900">
                         {project.category}
@@ -197,7 +197,7 @@ const PortfolioSection = () => {
                     </div>
                   </div>
 
-                  {/* Project Content */}
+                  {/* Project content */}
                   <div className="p-6">
                     <div className="flex justify-between items-start mb-4">
                       <div>
@@ -216,7 +216,7 @@ const PortfolioSection = () => {
                       {project.description}
                     </p>
 
-                    {/* Technologies */}
+                    {/* technologies */}
                     <div className="flex flex-wrap gap-2 mb-4">
                       {project.technologies.map((tech, techIndex) => (
                         <Badge key={techIndex} variant="secondary" className="text-xs bg-[#DBFDE4] text-gray-900">
@@ -225,7 +225,7 @@ const PortfolioSection = () => {
                       ))}
                     </div>
 
-                    {/* Features */}
+                    {/* features */}
                     <div className="space-y-2 mb-6">
                       {project.features.map((feature, featureIndex) => (
                         <div key={featureIndex} className="flex items-center text-sm">
@@ -235,7 +235,7 @@ const PortfolioSection = () => {
                       ))}
                     </div>
 
-                    {/* Action Buttons */}
+                    {/* action buttons */}
                     <div className="flex space-x-3">
                       {project.projectUrl ? (
                         <>
@@ -276,7 +276,7 @@ const PortfolioSection = () => {
           ))}
         </div>
 
-        {/* Call to Action */}
+        {/* Call to action */}
         <div className="text-center mt-16">
           <h3 className="font-sans text-2xl font-semibold text-gray-900 mb-4">
             Have a Project in Mind?

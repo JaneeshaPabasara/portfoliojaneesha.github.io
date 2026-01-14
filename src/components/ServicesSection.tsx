@@ -2,8 +2,7 @@ import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { ArrowRight, CheckCircle } from 'lucide-react';
 
-// Import your service images here
-// Replace these with your actual image paths
+
 import wireframingImage from '@/assets/proto.png';
 import visualDesignImage from '@/assets/brush.png';
 import mobileDesignImage from '@/assets/mobile.png';
@@ -12,28 +11,28 @@ import webDesignImage from '@/assets/dd.png';
 const ServicesSection = () => {
   const services = [
     {
-      image: wireframingImage, // Changed from icon to image
+      image: wireframingImage, 
       title: 'Wireframing & Prototyping',
       description: 'Transform your ideas into interactive prototypes that bring your vision to life.',
       features: ['Low & High Fidelity Wireframes', 'Interactive Prototypes', 'User Flow Mapping', 'Clickable Mockups'],
       bgColor: 'bg-[#DBFDE4]'
     },
     {
-      image: visualDesignImage, // Changed from icon to image
+      image: visualDesignImage, 
       title: 'Visual Design & UI/UX',
       description: 'Create stunning visual experiences that captivate users and drive engagement.',
       features: ['Modern UI Design', 'User Experience Design', 'Design Systems', 'Brand Integration'],
       bgColor: 'bg-[#BCEEFF]'
     },
     {
-      image: mobileDesignImage, // Changed from icon to image
+      image: mobileDesignImage, 
       title: 'Mobile App Design',
       description: 'Design intuitive mobile experiences that users love to interact with.',
       features: ['iOS & Android Design', 'Mobile-First Approach', 'Touch-Friendly Interfaces', 'App Store Optimization'],
       bgColor: 'bg-[#DBFDE4]'
     },
     {
-      image: webDesignImage, // Changed from icon to image
+      image: webDesignImage, 
       title: 'Website Design & Landing Pages',
       description: 'Build responsive web experiences that convert visitors into customers.',
       features: ['Responsive Web Design', 'Landing Page Optimization', 'E-commerce Design', 'Web Accessibility'],
@@ -51,7 +50,7 @@ const ServicesSection = () => {
   return (
     <section id="services" className="py-20 bg-[#F8F9FA]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+        {/* Section header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="font-sans text-4xl font-bold mb-6 text-gray-900 sm:text-5xl">
             My Services
@@ -62,15 +61,15 @@ const ServicesSection = () => {
           </p>
         </div>
 
-        {/* Services Grid */}
+        {/* Services grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 mb-16">
           {services.map((service, index) => (
             <Card key={index} className="p-8 shadow-soft hover-lift transition-all duration-300 hover:shadow-medium animate-scale-in overflow-hidden relative group bg-white" style={{ animationDelay: `${index * 0.1}s` }}>
-              {/* Background Accent */}
+              {/* Background accent */}
               <div className={`absolute inset-0 ${service.bgColor} opacity-5 group-hover:opacity-10 transition-opacity duration-300`}></div>
               
               <div className="relative z-10">
-                {/* Image instead of Icon */}
+                {/* Image instead of icon */}
                 <div className="mb-6">
                   <div className={`p-4 ${service.bgColor} rounded-xl inline-block`}>
                     <img 
@@ -90,7 +89,7 @@ const ServicesSection = () => {
                   {service.description}
                 </p>
 
-                {/* Features */}
+                {/* features */}
                 <div className="space-y-3 mb-8">
                   {service.features.map((feature, featureIndex) => (
                     <div key={featureIndex} className="flex items-center">
@@ -100,7 +99,7 @@ const ServicesSection = () => {
                   ))}
                 </div>
 
-                {/* CTA */}
+                {/* get start button */}
                 <Button variant="outline" className="w-full group/btn border-gray-900 text-gray-900 hover:bg-gray-900 hover:text-white transition-all duration-300" onClick={scrollToContact}>
                   Get Started
                   <ArrowRight className="ml-2 h-4 w-4 group-hover/btn:translate-x-1 transition-transform" />
@@ -110,7 +109,7 @@ const ServicesSection = () => {
           ))}
         </div>
 
-        {/* Process Overview */}
+        {/* Process overview */}
         <Card className="p-8 shadow-medium bg-[#BCEEFF] animate-fade-in-up" style={{ animationDelay: '0.8s' }}>
           <div className="text-center mb-8">
             <h3 className="font-sans text-3xl font-semibold text-gray-900 mb-4">

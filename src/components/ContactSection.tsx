@@ -255,7 +255,7 @@ const ContactSection = () => {
               
             </Card>
 
-            {/* Social Call-to-Action */}
+            
             <Card className="p-8 shadow-soft bg-gray-900 text-white">
               <div className="text-center">
                 <h4 className="font-sans text-xl font-semibold mb-4">

@@ -2,8 +2,7 @@ import { Card } from '@/components/ui/card';
 import { Badge } from '@/components/ui/badge';
 import { Figma, RefreshCw, TestTube } from 'lucide-react';
 
-// Import your skill images here
-// Replace these with your actual image paths
+
 import visualDesignImage from '@/assets/brush.png';
 import uxDesignImage from '@/assets/man.png';
 import prototypingImage from '@/assets/proto.png';
@@ -17,37 +16,37 @@ import figmaToolImage from '@/assets/design.png';
 const SkillsSection = () => {
   const skillCategories = [
     {
-      image: visualDesignImage, // Changed from icon to image
+      image: visualDesignImage, 
       title: 'Visual Design',
       description: 'Creating beautiful and cohesive visual experiences',
       skills: ['UI Design', 'Visual Design', 'Color Theory', 'Typography', 'Brand Identity']
     },
     {
-      image: uxDesignImage, // Changed from icon to image
+      image: uxDesignImage, 
       title: 'UX Design',
       description: 'Crafting user-centered design solutions',
       skills: ['User Research', 'Wireframing', 'User Journey Mapping', 'Information Architecture']
     },
     {
-      image: prototypingImage, // Changed from icon to image
+      image: prototypingImage, 
       title: 'Prototyping',
       description: 'Bringing ideas to life through interactive prototypes',
       skills: ['Interactive Prototypes', 'Micro-interactions',  'User Testing']
     },
     {
-      image: mobileDesignImage, // Changed from icon to image
+      image: mobileDesignImage, 
       title: 'Mobile Design',
       description: 'Designing seamless mobile experiences',
       skills: ['iOS Design', 'Android Design', 'Mobile UI Patterns', 'Responsive Design']
     },
     {
-      image: webDesignImage, // Changed from icon to image
+      image: webDesignImage, 
       title: 'Web Design',
       description: 'Creating engaging web interfaces and experiences',
       skills: ['Landing Pages', 'Web Applications', 'Responsive Layouts', 'Web Accessibility']
     },
     {
-      image: researchTestingImage, // Changed from icon to image
+      image: researchTestingImage, 
       title: 'Research & Testing',
       description: 'Validating designs through user feedback',
       skills: ['Usability Testing', 'A/B Testing', 'User Interviews', 'Analytics Review']
@@ -63,12 +62,12 @@ const SkillsSection = () => {
 
   const processes = [
     {
-      image: iterativeImage, // Changed from icon to image
+      image: iterativeImage, 
       title: 'Iterative Design Process',
       description: 'Continuously refining designs based on feedback and testing results'
     },
     {
-      image: testingImage, // Changed from icon to image
+      image: testingImage, 
       title: 'Usability Testing',
       description: 'Regular testing with real users to validate design decisions'
     }
@@ -77,7 +76,7 @@ const SkillsSection = () => {
   return (
     <section id="skills" className="py-20 bg-white">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        {/* Section Header */}
+        {/* Section header */}
         <div className="text-center mb-16 animate-fade-in-up">
           <h2 className="font-sans text-4xl font-bold mb-6 text-gray-900 sm:text-5xl">
             Skills & Expertise
@@ -87,7 +86,7 @@ const SkillsSection = () => {
           </p>
         </div>
 
-        {/* Skills Grid */}
+        {/* Skills grid */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-16">
           {skillCategories.map((category, index) => (
             <Card key={index} className="p-6 shadow-soft hover-lift transition-all duration-300 hover:shadow-medium animate-scale-in bg-white" style={{ animationDelay: `${index * 0.1}s` }}>
@@ -117,9 +116,9 @@ const SkillsSection = () => {
           ))}
         </div>
 
-        {/* Tools & Proficiency */}
+        {/* Tools  */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 mb-16">
-          {/* Tools */}
+          
           <Card className="p-8 shadow-soft animate-fade-in-up bg-white" style={{ animationDelay: '0.6s' }}>
             <h3 className="font-sans text-2xl font-semibold text-gray-900 mb-6 flex items-center">
               <img 
@@ -168,7 +167,7 @@ const SkillsSection = () => {
               ))}
             </div>
 
-            {/* Design Process Steps */}
+            {/* Design process steps */}
             <div className="mt-8 p-6 bg-[#BCEEFF] rounded-lg">
               <h4 className="font-semibold text-gray-900 mb-4">My Design Workflow</h4>
               <div className="grid grid-cols-2 gap-4 text-sm">

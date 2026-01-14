@@ -71,7 +71,7 @@ const AboutSection = () => {
             </Card>
           </div>
 
-          {/* Highlights */}
+          
           <div className="space-y-6 animate-fade-in-up" style={{ animationDelay: '0.4s' }}>
             <h3 className="font-sans text-2xl font-semibold text-gray-900 mb-8 text-center lg:text-left">
               What Defines Me
