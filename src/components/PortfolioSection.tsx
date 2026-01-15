@@ -38,7 +38,7 @@ const PortfolioSection = () => {
       technologies: ['Figma', 'Mobile UI', 'Interactive Design'],
       features: ['Character customization tools', 'Real-time preview', 'Save and share functionality', 'Intuitive touch interface'],
       type: 'Mobile App',
-      year: '2024',
+      year: '2025',
       projectUrl: 'https://www.figma.com/proto/iPpCBhhCgtGbS8JmPWAczE/mobileApp?node-id=23-18&t=pj0ic7il9eoHNYQK-1&starting-point-node-id=23%3A18&content-scaling=fixed'
     },
     {
@@ -50,7 +50,7 @@ const PortfolioSection = () => {
       technologies: ['Figma', 'E-commerce', 'Mobile UX'],
       features: ['Custom bouquet builder', 'Occasion-based recommendations', 'Seamless checkout process', 'Beautiful product gallery'],
       type: 'Mobile App',
-      year: '2024',
+      year: '2025',
       projectUrl: 'https://www.figma.com/proto/iPpCBhhCgtGbS8JmPWAczE/mobileApp?page-id=154%3A55&node-id=195-437&p=f&viewport=381%2C68%2C0.46&t=TkXqfnY4aJSnzEdr-1&scaling=scale-down&content-scaling=fixed'
     },
     {
@@ -62,7 +62,7 @@ const PortfolioSection = () => {
       technologies: ['Figma', 'Mobile UI', 'UX Design'],
       features: ['Daily habit tracking', 'Progress visualization', 'Goal & Target Setting', 'Scheduled reminders'],
       type: 'Mobile App',
-      year: '2024',
+      year: '2025',
       projectUrl: 'https://www.figma.com/proto/iPpCBhhCgtGbS8JmPWAczE/mobileApp?page-id=316%3A431&node-id=316-493&p=f&viewport=-356%2C162%2C0.32&t=cbFdyx04OuN9c4tk-1&scaling=scale-down&content-scaling=fixed'
     },
     {
@@ -74,7 +74,7 @@ const PortfolioSection = () => {
       technologies: ['Figma', 'Web Design', 'Booking System'],
       features: ['Real-time train schedules', 'Ticket status tracking', 'Ticket management system'],
       type: 'Website',
-      year: '2024',
+      year: '2025',
       projectUrl: 'https://www.figma.com/proto/VhlnqQzKbGvgDmQaKqYZes/Home-page?page-id=6%3A376&node-id=249-649&viewport=231%2C106%2C0.19&t=LqsBqrSQzPkelO3o-1&scaling=min-zoom&content-scaling=fixed&starting-point-node-id=249%3A649'
     },
     // {
